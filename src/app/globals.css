@@ -1,0 +1,441 @@
+@import "tailwindcss";
+
+/* Logo-aligned palette: open violet + kroke (warm gold) */
+@theme inline {
+  --color-ivory:        #FDFBF8;
+  --color-ivory-mid:    #F6F0FF;
+  --color-ivory-dark:   #EDE6F8;
+  --color-plum:         #2E1F52;
+  --color-plum-mid:     #3D2B6A;
+  --color-plum-soft:    #524080;
+  --color-lav-50:       #FAF6FF;
+  --color-lav-100:      #F3EBFF;
+  --color-lav-200:      #E4D4FC;
+  --color-lav-300:      #CEB4F7;
+  --color-lav-400:      #B58FEF;
+  --color-lav-500:      #9B6FE8;
+  --color-lav-600:      #8656DC;
+  --color-lav-700:      #6F44C4;
+  --color-lav-800:      #5736A0;
+  --color-lav-900:      #3F2878;
+  --color-gold-200:     #FFF2CC;
+  --color-gold-300:     #FFD978;
+  --color-gold-400:     #F5B335;
+  --color-gold-500:     #E89A18;
+  --color-kroke-300:    #FFD978;
+  --color-kroke-400:    #F5B335;
+  --color-kroke-500:    #E89A18;
+  --font-display:       "Cormorant Garamond", Georgia, serif;
+  --font-sans:          "Outfit", system-ui, sans-serif;
+  --font-script:        "Great Vibes", "Segoe Script", cursive;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Preloader: hide site content until first visit animation completes */
+html.preloader-pending body {
+  overflow: hidden;
+}
+
+html.preloader-pending #site-content {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+html.preloader-pending #preloader-static {
+  display: flex;
+}
+
+html.preloader-ready #preloader-static {
+  display: none;
+}
+
+html.preloader-ready #site-content {
+  visibility: visible;
+}
+
+#preloader-static {
+  display: none;
+}
+
+body {
+  background: var(--color-ivory);
+  color: var(--color-plum);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-lav-200);
+  color: var(--color-plum);
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--color-ivory); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-lav-400), var(--color-lav-600));
+  border-radius: 99px;
+}
+
+/* ── Typography ─────────────────────────────────── */
+.font-display {
+  font-family: var(--font-display);
+  font-feature-settings: "liga" 1, "kern" 1;
+}
+
+.font-script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.text-display-xl {
+  font-family: var(--font-display);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+}
+
+.text-body-premium {
+  font-weight: 300;
+  letter-spacing: 0.015em;
+  line-height: 1.75;
+  color: color-mix(in srgb, var(--color-plum) 58%, transparent);
+}
+
+.text-eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+/* ── Gradients ──────────────────────────────────── */
+.text-gradient {
+  background: linear-gradient(128deg, var(--color-lav-600) 0%, var(--color-lav-400) 45%, var(--color-gold-400) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gold {
+  background: linear-gradient(135deg, var(--color-gold-500) 0%, var(--color-gold-300) 55%, var(--color-gold-200) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Surfaces ───────────────────────────────────── */
+.glass {
+  background: rgba(253, 251, 248, 0.86);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1px solid color-mix(in srgb, var(--color-lav-300) 45%, transparent);
+}
+
+.glass-dark {
+  background: color-mix(in srgb, var(--color-plum-mid) 88%, transparent);
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bg-dark-section { background: var(--color-plum-mid); }
+.bg-dark-card { background: var(--color-plum-soft); }
+.bg-dark-elevated { background: var(--color-lav-800); }
+
+.bg-warm-mesh {
+  background:
+    radial-gradient(ellipse 75% 55% at 10% -8%, color-mix(in srgb, var(--color-lav-300) 35%, transparent) 0%, transparent 58%),
+    radial-gradient(ellipse 55% 45% at 92% 105%, color-mix(in srgb, var(--color-gold-400) 22%, transparent) 0%, transparent 58%),
+    radial-gradient(ellipse 40% 30% at 50% 50%, rgba(253, 251, 248, 0.92) 0%, transparent 70%),
+    var(--color-ivory);
+}
+
+.bg-hero-canvas {
+  background:
+    radial-gradient(ellipse 95% 75% at 50% -10%, color-mix(in srgb, var(--color-lav-300) 46%, transparent) 0%, transparent 58%),
+    radial-gradient(ellipse 55% 45% at 100% 85%, color-mix(in srgb, var(--color-gold-400) 38%, transparent) 0%, transparent 52%),
+    radial-gradient(ellipse 50% 45% at 0% 55%, color-mix(in srgb, var(--color-lav-400) 34%, transparent) 0%, transparent 52%),
+    linear-gradient(180deg, #FEFCF9 0%, var(--color-ivory) 40%, var(--color-ivory-mid) 100%);
+}
+
+.bg-section-elevated {
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--color-ivory) 100%);
+}
+
+/* ── Shadows & glow ─────────────────────────────── */
+.shadow-soft {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.92) inset,
+    0 4px 24px color-mix(in srgb, var(--color-plum) 6%, transparent);
+}
+
+.shadow-medium {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.75) inset,
+    0 8px 40px color-mix(in srgb, var(--color-lav-600) 16%, transparent),
+    0 2px 8px color-mix(in srgb, var(--color-plum) 5%, transparent);
+}
+
+.shadow-strong {
+  box-shadow:
+    0 12px 56px color-mix(in srgb, var(--color-lav-600) 22%, transparent),
+    0 4px 16px color-mix(in srgb, var(--color-plum) 8%, transparent);
+}
+
+.shadow-glow {
+  box-shadow:
+    0 0 48px color-mix(in srgb, var(--color-lav-500) 38%, transparent),
+    0 8px 24px color-mix(in srgb, var(--color-lav-600) 24%, transparent);
+}
+
+.shadow-gold-glow {
+  box-shadow:
+    0 0 36px color-mix(in srgb, var(--color-gold-400) 48%, transparent),
+    0 6px 18px color-mix(in srgb, var(--color-gold-500) 28%, transparent);
+}
+
+/* ── Decorative ─────────────────────────────────── */
+.dot-grid {
+  background-image: radial-gradient(color-mix(in srgb, var(--color-lav-500) 14%, transparent) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+.rule-ornament {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: color-mix(in srgb, var(--color-lav-700) 72%, transparent);
+  font-size: 10px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.rule-ornament::before,
+.rule-ornament::after {
+  content: "";
+  flex: 0 0 32px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--color-lav-500) 55%, transparent), transparent);
+}
+
+/* ── Method card number (gradient → gold on hover) ── */
+.method-num {
+  background: linear-gradient(128deg, var(--color-lav-600) 0%, var(--color-lav-400) 45%, var(--color-gold-400) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: filter 0.35s ease;
+}
+
+.group:hover .method-num {
+  background: linear-gradient(128deg, var(--color-gold-500) 0%, var(--color-gold-400) 50%, var(--color-gold-300) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Premium card ───────────────────────────────── */
+.card-premium {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid color-mix(in srgb, var(--color-lav-200) 65%, transparent);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-soft, 0 4px 24px color-mix(in srgb, var(--color-plum) 5%, transparent));
+  transition: border-color 0.45s ease, box-shadow 0.45s ease, transform 0.45s ease;
+}
+
+.card-premium:hover {
+  border-color: color-mix(in srgb, var(--color-lav-400) 60%, transparent);
+  box-shadow: 0 12px 48px color-mix(in srgb, var(--color-lav-500) 18%, transparent);
+}
+
+/* ── Input premium ──────────────────────────────── */
+.input-premium {
+  width: 100%;
+  padding: 0.9rem 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid color-mix(in srgb, var(--color-lav-200) 75%, transparent);
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--color-plum);
+  font-size: 0.875rem;
+  backdrop-filter: blur(8px);
+  transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+}
+
+.input-premium::placeholder {
+  color: color-mix(in srgb, var(--color-plum) 32%, transparent);
+}
+
+.input-premium:focus {
+  outline: none;
+  border-color: var(--color-lav-400);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-lav-400) 28%, transparent);
+  background: #fff;
+}
+
+@media (max-width: 1023px) {
+  .input-premium {
+    font-size: 1rem;
+    min-height: 3rem;
+  }
+}
+
+/* Mobile touch targets & performance */
+@media (max-width: 1023px) {
+  .touch-target {
+    min-height: 2.75rem;
+    min-width: 2.75rem;
+  }
+
+  .reduce-motion-mobile *,
+  .reduce-motion-mobile *::before,
+  .reduce-motion-mobile *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Editorial layer ────────────────────────────────
+   Derived from the client-approved AI mockups (ag / ag2): a warm ivory canvas,
+   quiet white cards with a hairline warm border, a short bronze rule instead of
+   heavy dividers, and serif headings that carry the weight on their own. Used by
+   the homepage sections so the whole page reads as one calm, editorial spread. */
+:root {
+  --editorial-cream:      #FAF7F1;
+  --editorial-cream-deep: #F3EEE4;
+  --editorial-line:       #E9E1D5;
+  --editorial-bronze:     #B8894A;
+  --editorial-body:       #6B5F7A;
+}
+
+.bg-editorial {
+  background:
+    radial-gradient(ellipse 60% 50% at 8% 0%, rgba(206, 180, 247, 0.16) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 40% at 95% 90%, rgba(184, 137, 74, 0.10) 0%, transparent 60%),
+    linear-gradient(180deg, #FDFBF7 0%, var(--editorial-cream) 55%, var(--editorial-cream-deep) 100%);
+}
+
+.bg-editorial-flat { background: var(--editorial-cream); }
+.bg-editorial-paper { background: linear-gradient(180deg, #FFFDFA 0%, var(--editorial-cream) 100%); }
+
+.card-editorial {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--editorial-line);
+  border-radius: 0.9rem;
+  box-shadow: 0 1px 2px rgba(46, 31, 82, 0.03), 0 12px 32px rgba(46, 31, 82, 0.05);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card-editorial:hover {
+  border-color: color-mix(in srgb, var(--editorial-bronze) 42%, transparent);
+  box-shadow: 0 2px 4px rgba(46, 31, 82, 0.04), 0 20px 46px rgba(46, 31, 82, 0.09);
+}
+
+/* Short bronze rule that sits under a card title in the mockups. */
+.rule-bronze {
+  display: block;
+  height: 2px;
+  width: 2.6rem;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--editorial-bronze), color-mix(in srgb, var(--editorial-bronze) 25%, transparent));
+}
+
+.eyebrow-editorial {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-lav-800) 78%, transparent);
+}
+
+.text-editorial-body {
+  color: var(--editorial-body);
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.text-bronze { color: var(--editorial-bronze); }
+
+/* Circular lavender icon badge used by the pain / benefit cards. */
+.badge-lav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 999px;
+  background: linear-gradient(160deg, #EFE6FB 0%, #E6DAF7 100%);
+  color: var(--color-plum);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), background 0.45s ease;
+}
+
+.badge-lav-sm {
+  width: 3rem;
+  height: 3rem;
+}
+
+.group:hover .badge-lav {
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(160deg, #F6EEDC 0%, #EFE0C2 100%);
+}
+
+/* Pre–rebrand palette for selected sections only */
+.legacy-palette {
+  --color-ivory: #faf7f2;
+  --color-ivory-mid: #f3ede4;
+  --color-ivory-dark: #eae2d6;
+  --color-plum: #120a24;
+  --color-plum-mid: #1a1035;
+  --color-plum-soft: #2a1a4e;
+  --color-lav-50: #f6f1ff;
+  --color-lav-100: #ede4ff;
+  --color-lav-200: #d4c4f5;
+  --color-lav-300: #b8a0e8;
+  --color-lav-400: #9a7dd8;
+  --color-lav-500: #7b5bc4;
+  --color-lav-600: #6344ad;
+  --color-lav-700: #4d3294;
+  --color-lav-800: #362070;
+  --color-lav-900: #1e1250;
+  --color-gold-200: #f8ecc4;
+  --color-gold-300: #efd98a;
+  --color-gold-400: #e4c45a;
+  --color-gold-500: #c9a83a;
+}
+
+.legacy-palette .bg-dark-section {
+  background: #120a24;
+}
+
+.legacy-palette .bg-dark-card {
+  background: #1a1035;
+}
+
+.legacy-palette .bg-dark-elevated {
+  background: #241545;
+}

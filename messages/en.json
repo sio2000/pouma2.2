@@ -1,0 +1,495 @@
+{
+  "preloader": {
+    "m1": "\"The strength was already within you.\"",
+    "m2": "\"Every evolution begins with one voice.\"",
+    "m3": "\"The next step starts now.\"",
+    "m4": "\"Awaken the Puma within you.\""
+  },
+  "english": {
+    "badge": "English · Communication Coaching",
+    "badgeShort": "English & Communication",
+    "note": "Specialized in English — from everyday conversation and grammar foundations to executive meetings, presentations, and international interviews."
+  },
+  "brand": {
+    "name": "The Pouma Academy",
+    "tagline": "Your voice, revealed",
+    "sparkle": "Speak · Lead · Shine"
+  },
+  "nav": {
+    "home": "Home",
+    "programs": "Evolution Programs",
+    "about": "Dimitra",
+    "resources": "Our Class",
+    "contact": "Contact",
+    "bookSession": "Book Your Spot",
+    "lang": "ΕΛ"
+  },
+  "hero": {
+    "motto": "Speak English the way you dream",
+    "tagline": "Boutique Transformation Academy",
+    "headline1": "Not just",
+    "headline2": "English lessons.",
+    "headline3": "Confidence coaching.",
+    "subtext": "We don't teach English. We unlock expression, confidence, and professional presence.",
+    "cta1": "Begin Your Journey",
+    "cta2": "View Programs",
+    "whyName": "why we named it The Pouma Academy",
+    "quotesLabel": "Sound familiar?",
+    "scrollHint": "Discover",
+    "photoBadge": "Communication Coach",
+    "founderEyebrow": "The Founder",
+    "founderCredential": "19 years of experience",
+    "founderIntro1": "Communication coach with 19 years of experience.",
+    "founderIntro2": "I teach you to express yourself in English with confidence.",
+    "empathyEyebrow": "Sound familiar?",
+    "empathyLabel": "This happens because…",
+    "empathyAnswer": "You learned English for exams — not to actually speak it. Here we change that.",
+    "empathyAnswerFull": "…you learned English for exams, not to actually speak it. Here we change that: in boutique groups of 3–4 we build your expression and confidence, so you speak naturally, from your very first day.",
+    "empathyMore": "Learn more",
+    "freeAssessment": "Get a free assessment",
+    "empathy": [
+      "I know, but I'm afraid.",
+      "I think I'll say it wrong.",
+      "I'll forget everything.",
+      "I'll make mistakes and they'll laugh.",
+      "I go to speak, but I freeze.",
+      "I want to speak English, but I get stuck.",
+      "I understand everything, but I can't reply.",
+      "I'm embarrassed by my accent.",
+      "Others sound confident. I don't.",
+      "I lose opportunities because I stay silent.",
+      "I want to, but something stops me."
+    ],
+    "programsLabel": "Course Programs",
+    "servicesLabel": "My services",
+    "aboutLabel": "Who I am",
+    "aboutMore": "More about me",
+    "aboutFacts": [
+      "Years of experience across Greece, Europe & the USA",
+      "Boutique groups of 3–4 people",
+      "Focus on expression, not endless drills",
+      "You speak English from day one"
+    ],
+    "programsIntroEyebrow": "And now?",
+    "programsIntroLead": "You can speak about your thoughts, fears and goals",
+    "programsIntroRest": ", and together we build the path that fits you."
+  },
+  "intro": {
+    "eyebrow": "Why The Pouma Academy",
+    "headline1": "You know English.",
+    "headline2": "But you freeze the moment you have to speak.",
+    "lead": "I'm Dimitra. I don't teach you grammar one more time — I help you find your voice, express yourself with confidence, and claim the opportunities you deserve.",
+    "cards": [
+      {
+        "tag": "Who I am",
+        "title": "A communication coach — not another language school",
+        "desc": "19 years of teaching across Greece, Europe & the USA. A boutique academy that sees the person behind the language."
+      },
+      {
+        "tag": "Your problem",
+        "title": "You know the theory, but freeze when it matters",
+        "desc": "Meetings, interviews, presentations: you freeze, say \"yes\" and \"ok\", and lose opportunities because you can't express yourself the way you deserve."
+      },
+      {
+        "tag": "How I solve it",
+        "title": "Personalized coaching in groups of 3–4",
+        "desc": "We focus on expression and confidence — not endless exercises. You speak from day one, with material built around you."
+      }
+    ],
+    "cta": "Book a free intro"
+  },
+  "reveal": {
+    "eyebrow": "The Pouma Academy",
+    "line1": "Language is only the beginning.",
+    "line2": "What we build is your voice.",
+    "sub": "Confidence, presence, and the freedom to express yourself — in every room, at every opportunity."
+  },
+  "bridge": {
+    "eyebrow": "Think about it",
+    "line1": "Your talent already speaks.",
+    "line2": "It just needs the language for the world to hear it."
+  },
+  "reveal2": {
+    "eyebrow": "The method",
+    "line1": "Stop translating.",
+    "line2": "Start thinking in English.",
+    "sub": "When the language becomes instinct, confidence follows on its own."
+  },
+  "scrollQuotes": {
+    "q1": "\"I'm afraid to speak.\"",
+    "q2": "\"I know more than I can express.\"",
+    "q3": "\"I want to sound professional.\"",
+    "q4": "\"What if I make a mistake?\"",
+    "q5": "\"I want to be taken seriously.\"",
+    "q6": "\"I lost opportunities because I couldn't express myself.\"",
+    "scrollHint": "Keep scrolling"
+  },
+  "dimitraVideos": {
+    "label": "Meet Dimitra",
+    "headline": "Introduction, advice & tips",
+    "body": "Short ideas and practical advice for more confident, natural communication — from your first introduction to useful everyday tips.",
+    "video1Title": "Introduction",
+    "video2Title": "Advice",
+    "video3Title": "Tips",
+    "episode": "Video {n}",
+    "play": "Play video",
+    "fullscreen": "Fullscreen",
+    "close": "Close"
+  },
+  "philosophy": {
+    "label": "Philosophy",
+    "headline": "We don't teach.",
+    "headline2": "We transform.",
+    "body": "Every person carries within them a power that has not yet found its voice. Communication is not just language — it is presence, thought, confidence. That is exactly what we teach.",
+    "stat1Value": "3,500+",
+    "stat1Label": "students speak English with courage and without hesitation",
+    "stat2Value": "19",
+    "stat2Label": "years of teaching in Greece, Europe and the USA",
+    "stat3Value": "98%",
+    "stat3Label": "Achieve their goal"
+  },
+  "personalization": {
+    "label": "Unique Experience",
+    "headline": "No two",
+    "headline2": "experiences are alike.",
+    "bodyLead": "Every program is designed exclusively around you.",
+    "body": "Your goals. Your pace. Your needs. You receive different materials, different guidance, a different approach.",
+    "learnMore": "Learn more",
+    "cardLabel": "Sample program",
+    "cardSteps": [
+      "Assessment & Goals",
+      "Personalized Plan",
+      "Materials Made for You",
+      "Deep Feedback",
+      "Visible Progress"
+    ],
+    "cardQuote": "No two programs are ever the same.",
+    "groupSizeLabel": "Group size",
+    "groupSize": "3–4 max",
+    "items": [
+      { "title": "Assessment Before Start", "desc": "We deeply understand where you are and where you want to go." },
+      { "title": "Material Made for You", "desc": "No standardized books. Every resource is specifically selected." },
+      { "title": "Deep Feedback", "desc": "Detailed, actionable feedback after every meeting." },
+      { "title": "Measurable Progress", "desc": "You see your progress at every stage of the journey." }
+    ]
+  },
+  "communication": {
+    "label": "Communication Coaching",
+    "headline": "Knowing isn't enough.",
+    "headline2": "You need to express yourself.",
+    "body": "True power is not grammar. It is the ability to think, organize and express yourself clearly and confidently — in every environment.",
+    "quote": "Reading the signs doesn't make you a driver. Just as endless grammar exercises don't, on their own, teach you to speak English",
+    "skillsHint": "Click to learn more · double-click to close",
+    "skills": [
+      {
+        "title": "Professional Presentations",
+        "emotion": "Worried about the future of your job?",
+        "detail": "Structure, flow, and presence for meetings, pitches, and conferences — so you sound confident and persuasive, not just grammatically correct."
+      },
+      {
+        "title": "Interviews & Business Meetings",
+        "detail": "Practice real interview and call scenarios: how you answer, argue your point, and stay composed under pressure."
+      },
+      {
+        "title": "Structured Thinking & Argumentation",
+        "detail": "Organize your thinking before you speak, build clear arguments, and express ideas with precision — ideal for professionals who need to persuade, not only inform."
+      },
+      {
+        "title": "Leadership Communication",
+        "detail": "Communication that inspires teams: feedback, clarity, tone, and presence in leadership roles — from team leads to founders."
+      },
+      {
+        "title": "Confidence & Presence",
+        "detail": "Voice, pace, body language, and mental framing — so you feel at home when speaking English, even under pressure."
+      },
+      {
+        "title": "Critical Analysis & Rhetoric",
+        "detail": "Analyze texts, ideas, and arguments in English — to express yourself more deeply, precisely, and persuasively in professional settings."
+      }
+    ]
+  },
+  "method": {
+    "label": "The Pouma Method",
+    "journeyLabel": "The journey",
+    "stages": [
+      "Grammar and Speaking Foundations",
+      "Speaking Reset",
+      "Professional Communication & Executive Presence",
+      "Communication Strategy"
+    ]
+  },
+  "puma": {
+    "label": "The Puma Story",
+    "headline": "The Power that",
+    "headline2": "was always there.",
+    "p1": "Just as the puma stays still before it runs toward its goal, you too HAVE power and ambitions that nonetheless remain dormant without proper English. You need the environment and the method to believe in yourself and chase your dreams today with momentum.",
+    "p2": "Without English, you are limited.",
+    "p3": "With proper English, you multiply your power.",
+    "p4": "At The Pouma Academy we have the experience and the method so you achieve what you want and finally feel: \"Yes, I speak English the way I always wanted and the way I deserve\"",
+    "p5": "And then one goal will bring the next.. now you design your future and you shine",
+    "quote1": "Through English, you discover the language you want to speak, but above all the way to speak with love and respect for yourself.",
+    "quote2": "What we do together goes beyond conventional teaching. It is a deeper journey where you learn to trust your strengths, recognize your worth, and allow yourself to shine.",
+    "quote3": "You learn a new language to connect with the world, but primarily to build a strong, confident relationship with yourself."
+  },
+  "exclusivity": {
+    "label": "Exclusive Groups",
+    "headline": "Maximum 3–4 people.",
+    "headline2": "Never more.",
+    "body": "This is not a classroom. It is private coaching in a small group. Every meeting is focused, deep and personalized. We see you as a person, not a student.",
+    "items": [
+      { "number": "3–4", "label": "people maximum" },
+      { "number": "70'", "label": "focused meeting" },
+      { "number": "100%", "label": "personalized material" }
+    ]
+  },
+  "difference": {
+    "label": "Why We Are Different",
+    "title": "This is not just a school.",
+    "features": {
+      "personalization": {
+        "title": "Full Personalization",
+        "desc": "Every journey is designed exclusively around your goals, pace, and unique needs."
+      },
+      "smallGroups": {
+        "title": "Premium Small Groups",
+        "desc": "Never more than 4 students. Your attention always remains at the center."
+      },
+      "methodology": {
+        "title": "Scientific Methodology",
+        "desc": "Structured educational approach based on proven language acquisition techniques."
+      },
+      "communication": {
+        "title": "Communication, not Grammar",
+        "desc": "You learn to speak, think and express yourself — not just complete exercises."
+      },
+      "criticalThinking": {
+        "title": "Critical Thinking",
+        "desc": "You develop analysis, argumentation, and persuasion skills in English."
+      },
+      "realLife": {
+        "title": "Real-Life Applications",
+        "desc": "Every meeting mirrors real professional and social situations."
+      }
+    }
+  },
+  "testimonials": {
+    "label": "Success Stories",
+    "headline": "People who learned",
+    "headline2": "to express themselves with confidence.",
+    "items": [
+      {
+        "name": "Maria P.",
+        "avatar": "/testimonials/avatar-maria.jpg",
+        "role": "Marketing Director · Athens",
+        "context": "Voice Accelerator · 8 weeks",
+        "quote": "Honestly, I used to keep my mic on mute in every Zoom with international clients. By week three I gave a presentation in English without overthinking it — something that had never happened before.",
+        "transformation": "From mute on Zoom, to speaker at an international conference"
+      },
+      {
+        "name": "Alexander K.",
+        "avatar": "/testimonials/avatar-alex.jpg",
+        "role": "Software Engineer · Remote team",
+        "context": "Professional Excellence · 10 weeks",
+        "quote": "It wasn't about vocabulary. In meetings I'd just say 'yes' and 'sounds good' because I didn't know how to join the conversation. Now I speak up, disagree, propose — and the team values it.",
+        "transformation": "From silent dev, to lead on a global team"
+      },
+      {
+        "name": "Sofia N.",
+        "avatar": "/testimonials/avatar-sofia.jpg",
+        "role": "E-shop owner",
+        "context": "Custom Journey · B2B sales",
+        "quote": "I had to close a deal with a supplier abroad and kept getting stuck on emails. Dimitra worked through real drafts with me — not template phrases. In five weeks I sent the proposal on my own.",
+        "transformation": "From Google Translate emails, to B2B negotiations"
+      },
+      {
+        "name": "Eleni M.",
+        "avatar": "/testimonials/avatar-eleni.jpg",
+        "role": "HR Manager · Multinational",
+        "context": "Foundation Reset · new role",
+        "quote": "I started a new job thinking my English was 'fine enough.' In my first call with HR from London I froze on a simple question. Here I rebuilt foundations — through conversation, not textbooks.",
+        "transformation": "From freezing in interviews, to easy communication with HQ"
+      },
+      {
+        "name": "Nikos D.",
+        "avatar": "/testimonials/avatar-nikos.jpg",
+        "role": "Account Manager",
+        "context": "Voice Accelerator · international clients",
+        "quote": "Most of my clients are Greek-speaking, but more and more calls are in English. I felt I sounded 'small.' She didn't give me word lists — she gave me space to speak without being cut off.",
+        "transformation": "From awkward on calls, to confident account manager"
+      },
+      {
+        "name": "Christina L.",
+        "avatar": "/testimonials/avatar-christina.jpg",
+        "role": "Architect · Freelance",
+        "context": "Professional Excellence · portfolio & pitches",
+        "quote": "I had to present a project to a studio in Berlin — over video call. Before, I would have postponed it. We worked the pitch almost line by line, in my own voice. The project got approved.",
+        "transformation": "From fear of international pitches, to accepted proposal"
+      }
+    ]
+  },
+  "cta": {
+    "headline": "Are you ready to awaken",
+    "headline2": "your inner Puma?",
+    "body": "Your first introduction is free. No obligations. No pressure.",
+    "primary": "Book Free Assessment",
+    "secondary": "View Programs"
+  },
+  "programs": {
+    "hero": {
+      "label": "Evolution Programs",
+      "headline": "Your journey",
+      "headline2": "starts here.",
+      "sub": "Every path is unique. Designed around who you are and who you want to become."
+    },
+    "selector": "Who do you want to become?",
+    "journeyLabel": "Your evolution path",
+    "path1": {
+      "number": "01",
+      "title": "Foundation Reset",
+      "subtitle": "Build the foundations.",
+      "tag": "Starting Point",
+      "tagColor": "lavender",
+      "duration": "4 weeks",
+      "sessions": "4 meetings",
+      "sessionLength": "70' each",
+      "groupSize": "3–4 people",
+      "description": "For those who feel that lack of grammar foundation prevents them from expressing themselves freely. We rebuild the foundations with real communication as the goal.",
+      "focuses": ["Grammar as Expression Tool", "Pronunciation & Confidence", "Real Conversations", "Personalized Material", "Feedback Every Meeting"]
+    },
+    "path2": {
+      "number": "02",
+      "title": "Voice Accelerator",
+      "subtitle": "Find your voice.",
+      "tag": "Evolution",
+      "tagColor": "purple",
+      "description": "Do you have the skills but struggle to express yourself naturally? This path is for you. We focus on fluid, natural communication.",
+      "focuses": ["High-Value Vocabulary", "Natural Speech & Rhythm", "Fluency Without Hesitation", "Professional Language", "Real-Life Scenarios"]
+    },
+    "path3": {
+      "number": "03",
+      "title": "Professional Excellence",
+      "subtitle": "Lead with your voice.",
+      "tag": "Mastery",
+      "tagColor": "gold",
+      "description": "For professionals and executives who want to master professional communication. Presentations, meetings, leadership presence.",
+      "focuses": ["Meetings & Negotiations", "Presentations & Public Speaking", "Leadership Communication", "Strategic Thinking & Rhetoric", "Executive Presence"]
+    },
+    "path4": {
+      "number": "04",
+      "title": "Custom Journey",
+      "subtitle": "Your goal, your path.",
+      "tag": "Personalized",
+      "tagColor": "lavender",
+      "description": "Have a specific goal? We design a program exclusively around it.",
+      "goals": ["Job Interviews", "Cambridge & IELTS", "Speaking Clubs", "Specific Professional Roles", "International Exams", "Any Goal"]
+    },
+    "cta": {
+      "badge": "Free introduction",
+      "headline": "Not sure which path suits you?",
+      "body": "Book a free introductory assessment. We'll find it together.",
+      "button": "Book Free Assessment",
+      "perks": ["No commitment", "Personalized guidance", "Reply within 24h"]
+    }
+  },
+  "about": {
+    "hero": {
+      "label": "Meet Dimitra",
+      "headline": "I don't teach language.",
+      "headline2": "I teach people.",
+      "sub": "Every person I work with already has everything they need inside them. All I do is unlock it."
+    },
+    "story": {
+      "label": "The Story",
+      "headline": "Your voice has its own power.",
+      "body1": "With 19 years of teaching experience around the world, I know that real learning does not stay on the surface of rules and grammar. Here, we focus on the person behind the language.",
+      "body2": "Together we unlock your true confidence. English becomes the means to believe in your abilities, to express yourself freely, and to pursue your goals – personally and professionally."
+    },
+    "values": {
+      "label": "What I Believe",
+      "items": [
+        { "title": "The person comes first", "desc": "I deeply understand each person before I design anything." },
+        { "title": "Expression is power", "desc": "My goal is not for you to learn English. It is for you to find your voice." },
+        { "title": "No one is left behind", "desc": "Every person has their own rhythm and their own worth." },
+        { "title": "Change is human", "desc": "I don't create good students. I create people who dare." }
+      ]
+    },
+    "mission": {
+      "label": "Mission",
+      "quote": "I don't want to create good English students. I want to create people who dare to express themselves — in English and in their lives."
+    }
+  },
+  "contact": {
+    "hero": {
+      "label": "The First Step",
+      "headline": "The transformation",
+      "headline2": "begins here.",
+      "sub": "Your first introduction is free. A comfortable conversation to understand together where you are and where you want to go."
+    },
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "level": "Current Level",
+      "goal": "Main Goal",
+      "message": "Tell us a little about yourself",
+      "submit": "Send Request",
+      "success": "Thank you! We will contact you within 24 hours.",
+      "levels": ["Beginner", "Elementary", "Intermediate", "Upper-Intermediate", "Advanced"],
+      "goals": ["Professional Advancement", "Confidence & Presence", "Exams (IELTS/Cambridge)", "Presentations & Public Speaking", "Job Interviews", "Everyday Communication"]
+    },
+    "info": {
+      "title": "Information",
+      "emailLabel": "Email",
+      "email": "ask@thepoumaacademy.com",
+      "responseLabel": "Response",
+      "response": "Within 24 hours",
+      "note": "Send us the form — we'll reach out to schedule your free introduction.",
+      "freeBadge": "Free introduction",
+      "freeNote": "No commitment · no pressure"
+    }
+  },
+  "resources": {
+    "hero": {
+      "label": "Our Class",
+      "headline": "The journey continues",
+      "headline2": "beyond class.",
+      "sub": "Exclusive materials for The Pouma Academy students — articles, extras, and study resources between meetings."
+    },
+    "filtersLabel": "Categories",
+    "searchPlaceholder": "Search materials...",
+    "results": "results",
+    "categories": {
+      "all": "All",
+      "pdf": "PDF & Materials",
+      "articles": "Articles",
+      "extras": "Extras",
+      "announcements": "Announcements"
+    },
+    "empty": "No materials in this category.",
+    "emptySearch": "No materials match your search.",
+    "pagination": {
+      "prev": "← Previous",
+      "next": "Next →",
+      "range": "{start}–{end} of {total}",
+      "page": "Page {page}/{totalPages}"
+    },
+    "download": "Download",
+    "readMore": "Read",
+    "article": {
+      "back": "Back to class",
+      "attachment": "Attached material",
+      "openPdf": "Open PDF",
+      "externalLink": "Related link",
+      "viewFullscreen": "Fullscreen",
+      "clickToExpand": "Click for fullscreen"
+    }
+  },
+  "footer": {
+    "tagline": "Your voice deserves to be heard.",
+    "social": "Follow us",
+    "links": "Links",
+    "contact": "Contact",
+    "copyright": "© 2025 The Pouma Academy. All rights reserved.",
+    "poweredBy": "Powered by"
+  }
+}
