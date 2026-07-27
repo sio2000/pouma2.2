@@ -6,14 +6,16 @@ import { useTranslations, useLocale } from "next-intl";
 import HeroWorkshopButton from "@/components/sections/hero/HeroWorkshopButton";
 import PumaHeroBackdrop from "@/components/puma/PumaHeroBackdrop";
 import {
-  StarIcon,
-  LiveIcon,
+  GlobeIcon,
   GroupIcon,
-  NoteIcon,
+  SpeakIcon,
+  ChatIcon,
 } from "@/components/sections/hero/HeroTrustIcons";
 import { EASE_LUXURY } from "@/lib/motion";
 
-const TRUST_ICONS = [StarIcon, GroupIcon, LiveIcon, NoteIcon];
+/* One mark per proof, matched to what it actually says: the countries, the
+   small group, speaking over drills, talking from day one. */
+const TRUST_ICONS = [GlobeIcon, GroupIcon, SpeakIcon, ChatIcon];
 
 const Chevron = ({ className }: { className?: string }) => (
   <svg
@@ -107,7 +109,6 @@ export default function HeroSection() {
       <p className="text-[13px] font-medium text-lav-700">
         {tHero("founderEyebrow")}, {tBrand("name")}
       </p>
-      <p className="font-script text-[1.5rem] leading-none text-bronze mt-2.5">{founderName}</p>
       <Link
         href={`/${locale}/about`}
         className="group/link mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-lav-700 hover:text-plum transition-colors"
@@ -202,9 +203,10 @@ export default function HeroSection() {
 
         </div>
 
-        {/* Trust strip — four proofs, each in its own card, back on the gold
-            treatment the brand already uses: gold icon tile, gold sweep and a
-            gold border + glow on hover. */}
+        {/* Trust strip — four proofs, each in its own card, wearing the site's
+            original gold exactly: the gold-200 wash, the gold-400 hairline and
+            the gold glow are on permanently rather than only on hover, with the
+            same gold icon tile and the same sweep the other cards use. */}
         <motion.ul
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
@@ -220,7 +222,7 @@ export default function HeroSection() {
                   y: -6,
                   transition: { type: "spring", stiffness: 320, damping: 18 },
                 }}
-                className="group relative flex items-center gap-3 overflow-hidden rounded-2xl border border-lav-100 bg-white/90 px-4 py-4 shadow-soft backdrop-blur-sm transition-[border-color,background-color,box-shadow] duration-300 hover:border-gold-400 hover:bg-gold-200/40 hover:shadow-gold-glow"
+                className="group relative flex items-center gap-3 overflow-hidden rounded-2xl border border-gold-400 bg-gold-200/75 px-4 py-4 shadow-gold-glow backdrop-blur-sm transition-[border-color,background-color,box-shadow] duration-300 hover:border-gold-500 hover:bg-gold-300/60"
               >
                 {/* Gold sweep that wipes across on hover */}
                 <span
@@ -233,12 +235,12 @@ export default function HeroSection() {
                   aria-hidden
                 />
                 <span
-                  className="relative inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gold-300/50 bg-gradient-to-br from-gold-200/70 to-lav-100 text-gold-500 ring-1 ring-gold-200/50 shadow-soft transition-colors duration-300 group-hover:from-gold-300/80 group-hover:text-gold-600"
+                  className="relative inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gold-300/50 bg-gradient-to-br from-gold-300/80 to-lav-100 text-gold-600 ring-1 ring-gold-200/50 shadow-soft transition-colors duration-300 group-hover:from-gold-400/80"
                   aria-hidden
                 >
                   <Icon className="h-[21px] w-[21px]" />
                 </span>
-                <span className="relative text-[12px] leading-[1.35] text-plum/75">{fact}</span>
+                <span className="relative text-[12px] font-medium leading-[1.35] text-plum">{fact}</span>
               </motion.li>
             );
           })}

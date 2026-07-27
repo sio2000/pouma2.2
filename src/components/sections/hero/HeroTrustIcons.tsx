@@ -65,6 +65,21 @@ export const FreezeIcon = ({ className }: IconProps) => (
   </svg>
 );
 
+export const ChatIcon = ({ className }: IconProps) => (
+  <svg {...base} className={className}>
+    <path d="M4 6.5h16v10h-9.5L6 20v-3.5H4z" />
+    <path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01" />
+  </svg>
+);
+
+export const GlobeIcon = ({ className }: IconProps) => (
+  <svg {...base} className={className}>
+    <circle cx="12" cy="12" r="8.5" />
+    <path d="M3.5 12h17" />
+    <path d="M12 3.5c2.2 2.3 3.4 5.3 3.4 8.5S14.2 18.2 12 20.5c-2.2-2.3-3.4-5.3-3.4-8.5S9.8 5.8 12 3.5z" />
+  </svg>
+);
+
 export const CalendarIcon = ({ className }: IconProps) => (
   <svg {...base} className={className}>
     <rect x="4" y="5.5" width="16" height="14" rx="2" />
