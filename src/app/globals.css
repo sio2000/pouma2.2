@@ -399,6 +399,11 @@ body {
   height: 3rem;
 }
 
+.badge-lav-xs {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
 .group:hover .badge-lav {
   transform: translateY(-3px) scale(1.05);
   background: linear-gradient(160deg, #F6EEDC 0%, #EFE0C2 100%);

@@ -5,23 +5,33 @@ import { useTranslations, useLocale } from "next-intl";
 import PremiumButton from "@/components/ui/PremiumButton";
 import { EASE_LUXURY } from "@/lib/motion";
 
-type IntroCard = { tag: string; title: string; desc: string };
+type IntroCard = { title: string; desc: string };
 
+/* One mark per feeling, in the order the cards name them: the thought that is
+   already there, the voice that comes out smaller than it, and the freeze. */
 const ICONS: ReactNode[] = [
-  <g key="who">
-    <circle cx="12" cy="8" r="3.4" />
-    <path d="M5.5 19.5c0-3.7 2.9-5.6 6.5-5.6s6.5 1.9 6.5 5.6" />
+  <g key="thought">
+    <path d="M12 6.2v12.6" />
+    <path d="M12 7.4a3 3 0 00-5.2 1.9A2.8 2.8 0 005.5 12c0 .9.4 1.7 1 2.2A2.8 2.8 0 009.3 18a2.7 2.7 0 002.7 1" />
+    <path d="M12 7.4a3 3 0 015.2 1.9A2.8 2.8 0 0118.5 12c0 .9-.4 1.7-1 2.2A2.8 2.8 0 0114.7 18a2.7 2.7 0 01-2.7 1" />
   </g>,
-  <g key="problem">
-    <rect x="5" y="11" width="14" height="9" rx="2.2" />
-    <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+  <g key="voice">
+    <circle cx="10" cy="12" r="5.4" />
+    <path d="M17.4 8.6a5.4 5.4 0 010 6.8" opacity="0.75" />
+    <path d="M20.3 6.4a9 9 0 010 11.2" opacity="0.5" />
   </g>,
-  <g key="how">
-    <rect x="5" y="11" width="14" height="9" rx="2.2" />
-    <path d="M8 11V8a4 4 0 0 1 7.4-1.9" />
+  <g key="freeze">
+    <path d="M12 3.4v17.2M4.3 7.7l15.4 8.6M19.7 7.7L4.3 16.3" />
+    <path d="M12 7.2 9.7 5.2M12 7.2l2.3-2M12 16.8l-2.3 2M12 16.8l2.3 2" opacity="0.7" />
   </g>,
 ];
 
+/**
+ * "Δεν χρειάζεσαι άλλη μία αρχή από το μηδέν" — the beat the client singled out
+ * in her reference: one serif statement, its gold answer underneath, and three
+ * small cards whose only job is to make the reader think "yes, that is me".
+ * Kept deliberately compact — the previous cards read as three large buttons.
+ */
 export default function IntroSection() {
   const t = useTranslations("intro");
   const locale = useLocale();
@@ -30,18 +40,18 @@ export default function IntroSection() {
   const cards = t.raw("cards") as IntroCard[];
 
   return (
-    <section className="relative py-20 md:py-28 px-6 overflow-hidden bg-section-elevated">
+    <section className="relative py-18 md:py-24 px-6 overflow-hidden bg-section-elevated">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-24 right-0 w-[480px] h-[480px] rounded-full bg-lav-100/60 blur-3xl" />
         <div className="absolute bottom-0 -left-16 w-80 h-80 rounded-full bg-gold-200/30 blur-3xl" />
       </div>
 
-      <div ref={ref} className="relative z-10 max-w-6xl mx-auto">
+      <div ref={ref} className="relative z-10 max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, ease: EASE_LUXURY }}
-          className="flex items-center justify-center gap-3 mb-7"
+          className="flex items-center justify-center gap-3 mb-6"
         >
           <span className="w-8 h-px bg-gold-400/70" />
           <span className="text-eyebrow text-lav-600">{t("eyebrow")}</span>
@@ -49,50 +59,38 @@ export default function IntroSection() {
         </motion.div>
 
         <div className="text-center max-w-3xl mx-auto">
-          <div className="overflow-hidden">
-            <motion.h2
-              initial={{ y: "110%" }}
-              animate={inView ? { y: 0 } : {}}
-              transition={{ duration: 1, delay: 0.1, ease: EASE_LUXURY }}
-              className="text-display-xl text-plum text-[clamp(1.9rem,4.6vw,3.1rem)]"
-            >
-              {t("headline1")}
-            </motion.h2>
-          </div>
           <div className="overflow-hidden pb-1">
             <motion.h2
               initial={{ y: "110%" }}
               animate={inView ? { y: 0 } : {}}
-              transition={{ duration: 1, delay: 0.2, ease: EASE_LUXURY }}
-              className="text-display-xl text-gradient text-[clamp(1.9rem,4.6vw,3.1rem)]"
+              transition={{ duration: 1, delay: 0.1, ease: EASE_LUXURY }}
+              className="text-display-xl text-plum text-[clamp(1.75rem,4vw,2.7rem)]"
             >
-              {t("headline2")}
+              {t("headline1")}
             </motion.h2>
           </div>
-
           <motion.p
-            initial={{ opacity: 0, y: 18 }}
+            initial={{ opacity: 0, y: 14 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.85, delay: 0.4, ease: EASE_LUXURY }}
-            className="text-body-premium text-lg md:text-xl mt-7 max-w-2xl mx-auto"
+            transition={{ duration: 0.85, delay: 0.28, ease: EASE_LUXURY }}
+            className="mt-3 font-display text-gradient text-[clamp(1.15rem,2.3vw,1.6rem)] leading-snug"
           >
-            {t("lead")}
+            {t("headline2")}
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-7 mt-14 md:mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-12 md:mt-14">
           {cards.map((card, i) => (
             <motion.div
               key={card.title}
-              initial={{ opacity: 0, y: 36 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.7, delay: 0.5 + i * 0.14, ease: EASE_LUXURY }}
+              transition={{ duration: 0.7, delay: 0.45 + i * 0.12, ease: EASE_LUXURY }}
               whileHover={{
-                y: -10,
-                scale: 1.03,
+                y: -8,
                 transition: { type: "spring", stiffness: 320, damping: 18 },
               }}
-              className="group relative overflow-hidden rounded-2xl border border-lav-100 bg-white/90 backdrop-blur-sm p-7 md:p-8 shadow-soft cursor-default transition-[border-color,background-color,box-shadow] duration-300 hover:border-gold-400 hover:bg-gold-200/40 hover:shadow-gold-glow"
+              className="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-lav-100 bg-white/90 backdrop-blur-sm px-6 py-8 text-center shadow-soft cursor-default transition-[border-color,background-color,box-shadow] duration-300 hover:border-gold-400 hover:bg-gold-200/40 hover:shadow-gold-glow"
             >
               {/* Gold sweep that wipes across on hover */}
               <span
@@ -105,40 +103,28 @@ export default function IntroSection() {
                 aria-hidden
               />
 
-              <div className="relative flex items-center justify-between gap-4 mb-6">
-                <span
-                  className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-gold-200/70 to-lav-100 border border-gold-300/50 ring-1 ring-gold-200/50 text-gold-500 shadow-soft transition-colors duration-300 group-hover:from-gold-300/80 group-hover:text-gold-600"
-                  aria-hidden
+              <span className="badge-lav badge-lav-sm relative" aria-hidden>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={1.5}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
-                  <svg
-                    width="26"
-                    height="26"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    {ICONS[i % ICONS.length]}
-                  </svg>
-                </span>
-                <span
-                  className="method-num font-display text-[3.4rem] font-light leading-none tracking-tight"
-                  aria-hidden
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-              </div>
-
-              <span className="relative inline-flex rounded-full bg-lav-50 text-lav-700 border border-lav-100 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] mb-4 transition-colors duration-300 group-hover:bg-gold-200/60 group-hover:text-gold-600 group-hover:border-gold-300/60">
-                {card.tag}
+                  {ICONS[i % ICONS.length]}
+                </svg>
               </span>
 
-              <h3 className="relative font-display text-[1.6rem] md:text-[1.8rem] text-plum leading-[1.1] mb-3 tracking-tight">
+              <h3 className="relative mt-5 font-display text-[1.22rem] md:text-[1.32rem] text-plum leading-[1.25] tracking-tight">
                 {card.title}
               </h3>
-              <p className="relative text-[15px] leading-7 text-plum/65">{card.desc}</p>
+
+              <span className="rule-bronze relative my-4" aria-hidden />
+
+              <p className="relative text-[13.5px] leading-[1.7] text-editorial-body">{card.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -146,23 +132,23 @@ export default function IntroSection() {
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.95, ease: EASE_LUXURY }}
-          className="mt-12 flex justify-center"
+          transition={{ duration: 0.8, delay: 0.9, ease: EASE_LUXURY }}
+          className="mt-11 flex justify-center"
         >
           <PremiumButton
             href={`/${locale}/contact`}
             variant="gold"
             size="lg"
-            className="rounded-full px-12 py-6 text-lg sm:text-xl tracking-wide shadow-gold-glow"
+            className="rounded-full"
           >
             {t("cta")}
             <motion.svg
-              className="w-5 h-5 sm:w-6 sm:h-6"
+              className="w-4 h-4"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
               strokeWidth={2}
-              animate={{ x: [0, 5, 0] }}
+              animate={{ x: [0, 4, 0] }}
               transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
               aria-hidden
             >

@@ -83,21 +83,35 @@ export default function CommunicationSection() {
           </motion.p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {/* The specialisation cards: kept compact per the client's note, but
+            wearing the same gold hover the pain cards above them use — the
+            sweep, the growing accent bar and the gold glow. */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {skills.map((skill, i) => (
             <motion.article
               key={skill.title}
               initial={{ opacity: 0, y: 28 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.3 + (i % 3) * 0.1, ease: EASE_LUXURY }}
-              whileHover={{ y: -6 }}
-              className="group card-editorial flex flex-col p-7"
+              whileHover={{ y: -6, transition: { type: "spring", stiffness: 320, damping: 18 } }}
+              className="group relative flex flex-col overflow-hidden rounded-2xl border border-lav-100 bg-white/90 backdrop-blur-sm p-5 shadow-soft transition-[border-color,background-color,box-shadow] duration-300 hover:border-gold-400 hover:bg-gold-200/40 hover:shadow-gold-glow"
             >
-              <div className="flex items-start gap-4">
-                <span className="badge-lav badge-lav-sm shrink-0" aria-hidden>
+              {/* Gold sweep that wipes across on hover */}
+              <span
+                className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-gold-300/35 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
+                aria-hidden
+              />
+              {/* Top accent bar grows in on hover */}
+              <span
+                className="pointer-events-none absolute left-0 top-0 h-[3px] w-full origin-left scale-x-0 bg-gradient-to-r from-gold-400 to-gold-300 transition-transform duration-400 ease-out group-hover:scale-x-100"
+                aria-hidden
+              />
+
+              <div className="relative flex items-start gap-3.5">
+                <span className="badge-lav badge-lav-xs shrink-0" aria-hidden>
                   <svg
-                    width="22"
-                    height="22"
+                    width="19"
+                    height="19"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -108,24 +122,24 @@ export default function CommunicationSection() {
                     {SKILL_ICONS[i % SKILL_ICONS.length]}
                   </svg>
                 </span>
-                <h3 className="font-display text-plum text-[1.2rem] leading-[1.2] tracking-tight pt-1.5">
+                <h3 className="font-display text-plum text-[1.05rem] leading-[1.22] tracking-tight pt-1">
                   {skill.title}
                 </h3>
               </div>
 
               {skill.emotion && (
-                <p className="mt-5 font-display italic text-bronze text-[15px] leading-snug">
+                <p className="relative mt-4 font-display italic text-bronze text-[13.5px] leading-snug">
                   {skill.emotion}
                 </p>
               )}
 
-              <p className="mt-4 text-[14px] leading-[1.75] text-editorial-body flex-1">
+              <p className="relative mt-3 text-[13px] leading-[1.7] text-editorial-body flex-1">
                 {skill.detail}
               </p>
 
               <Link
                 href={`/${locale}/programs`}
-                className="mt-6 inline-flex items-center gap-1.5 text-[13px] font-semibold text-bronze transition-colors hover:text-plum"
+                className="relative mt-5 inline-flex items-center gap-1.5 text-[12.5px] font-semibold text-bronze transition-colors hover:text-plum"
               >
                 {tHero("empathyMore")}
                 <span className="sr-only">— {skill.title}</span>

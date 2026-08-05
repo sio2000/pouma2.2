@@ -39,22 +39,32 @@ export default function HeroEmpathyRotator() {
       transition={{ duration: 0.8, delay: 0.35, ease: EASE_LUXURY }}
       className="lg:pt-1"
     >
-      {/* Small eyebrow that frames the rotating fears as a shared, familiar feeling. */}
-      <div className="mb-4 flex items-center gap-2.5 justify-center">
-        <span className="h-px w-8 bg-gradient-to-r from-transparent to-[color:var(--editorial-bronze)]" aria-hidden />
-        <span className="eyebrow-editorial">{eyebrow}</span>
-        <span className="h-px w-8 bg-gradient-to-l from-transparent to-[color:var(--editorial-bronze)]" aria-hidden />
+      {/* The line that frames the rotating fears as a shared, familiar feeling.
+          It is the heading of this band, not a footnote to it: the client could
+          not see it as a small caption, so it now carries the section. */}
+      <div className="mb-8 flex items-center justify-center gap-4 sm:gap-6">
+        <span
+          className="h-px flex-1 max-w-[6rem] sm:max-w-[10rem] bg-gradient-to-r from-transparent to-[color:var(--editorial-bronze)]"
+          aria-hidden
+        />
+        <h2 className="font-display font-light text-plum tracking-[-0.02em] leading-[1.1] text-[clamp(1.9rem,4.6vw,3.1rem)] text-center whitespace-nowrap">
+          {eyebrow}
+        </h2>
+        <span
+          className="h-px flex-1 max-w-[6rem] sm:max-w-[10rem] bg-gradient-to-l from-transparent to-[color:var(--editorial-bronze)]"
+          aria-hidden
+        />
       </div>
 
-      {/* Slim glass card holding one rotating fear at a time — the "problem".
-          Kept wide and short (spread in length, not height) per client request. */}
+      {/* The card holding one rotating fear at a time — the "problem". Given
+          real size so it registers on the way down the page. */}
       <div
-        className="card-editorial relative overflow-hidden px-5 py-4 sm:px-7 min-h-[4.5rem] flex items-center justify-center w-full max-w-2xl mx-auto"
+        className="card-editorial relative overflow-hidden px-6 py-8 sm:px-10 sm:py-10 min-h-[8rem] sm:min-h-[9.5rem] flex items-center justify-center w-full max-w-3xl mx-auto shadow-gold-glow"
         aria-live="polite"
       >
         <div
           aria-hidden
-          className="pointer-events-none absolute -inset-x-2 -inset-y-2 -z-10 rounded-[2rem] bg-gradient-to-br from-lav-100/60 via-transparent to-gold-100/50 blur-2xl"
+          className="pointer-events-none absolute -inset-x-3 -inset-y-3 -z-10 rounded-[2.25rem] bg-gradient-to-br from-lav-100/70 via-transparent to-gold-200/55 blur-2xl"
         />
         <AnimatePresence mode="wait" initial={false}>
           <motion.p
@@ -63,10 +73,10 @@ export default function HeroEmpathyRotator() {
             animate={reduce ? { opacity: 1 } : { opacity: 1, y: 0, filter: "blur(0px)" }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, y: -12, filter: "blur(6px)" }}
             transition={{ duration: 0.5, ease: EASE_LUXURY }}
-            className="font-display italic text-[clamp(1.15rem,1.55vw,1.5rem)] leading-snug text-plum text-center"
+            className="font-display italic text-[clamp(1.6rem,3.2vw,2.4rem)] leading-[1.25] text-plum text-center"
           >
             <span
-              className="font-display not-italic text-gold-400 text-[1.4em] leading-none mr-1.5 align-[-0.3em]"
+              className="font-display not-italic text-gold-400 text-[1.3em] leading-none mr-1.5 align-[-0.3em]"
               aria-hidden
             >
               &ldquo;
@@ -80,7 +90,7 @@ export default function HeroEmpathyRotator() {
           "problem" card straight down into the explanation, so the answer reads
           as a continuation rather than a separate block. */}
       <div className="flex justify-center" aria-hidden>
-        <span className="my-1 block h-7 w-px bg-gradient-to-b from-[color:var(--editorial-bronze)] to-lav-300/40" />
+        <span className="my-2 block h-10 w-px bg-gradient-to-b from-[color:var(--editorial-bronze)] to-lav-300/40" />
       </div>
 
       {/* The reason + the fix — one smooth thought that says: we know why this
@@ -89,23 +99,23 @@ export default function HeroEmpathyRotator() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6, ease: EASE_LUXURY }}
-        className="card-editorial relative overflow-hidden px-6 py-6 sm:px-8 sm:py-7"
+        className="card-editorial relative overflow-hidden px-6 py-7 sm:px-10 sm:py-9 max-w-3xl mx-auto"
       >
         {/* Warm accent bar on the leading edge. */}
         <span
-          className="absolute inset-y-5 left-0 w-[3px] rounded-full bg-gradient-to-b from-[color:var(--editorial-bronze)] to-lav-400/60"
+          className="absolute inset-y-6 left-0 w-[3px] rounded-full bg-gradient-to-b from-[color:var(--editorial-bronze)] to-lav-400/60"
           aria-hidden
         />
         <div className="pl-3 text-center">
-          <span className="font-script leading-none text-plum text-[clamp(1.1rem,1.5vw,1.4rem)] drop-shadow-[0_2px_14px_rgba(120,80,160,0.18)]">
+          <span className="font-script leading-none text-plum text-[clamp(1.35rem,2vw,1.85rem)] drop-shadow-[0_2px_14px_rgba(120,80,160,0.18)]">
             {label}
           </span>
-          <span className="mt-2 block text-[clamp(0.98rem,1.1vw,1.1rem)] leading-snug text-editorial-body">
+          <span className="mt-3 block text-[clamp(1.02rem,1.35vw,1.2rem)] leading-relaxed text-editorial-body">
             {answer}
           </span>
           <Link
             href={`/${locale}/about`}
-            className="group mt-4 inline-flex items-center gap-1.5 rounded-md border border-plum/25 px-4 py-2 text-[13px] font-semibold text-plum hover:bg-plum hover:text-white hover:border-plum transition-colors"
+            className="group mt-5 inline-flex items-center gap-1.5 rounded-md border border-plum/25 px-5 py-2.5 text-[13.5px] font-semibold text-plum hover:bg-plum hover:text-white hover:border-plum transition-colors"
           >
             {t("empathyMore")}
             <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2} aria-hidden>

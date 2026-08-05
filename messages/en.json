@@ -27,10 +27,10 @@
   "hero": {
     "motto": "Speak English the way you dream",
     "tagline": "Boutique Transformation Academy",
-    "headline1": "Not just",
-    "headline2": "English lessons.",
-    "headline3": "Confidence coaching.",
-    "subtext": "We don't teach English. We unlock expression, confidence, and professional presence.",
+    "headline1": "You know English.",
+    "headline2": "But you freeze when",
+    "headline3": "it's time to speak.",
+    "subtext": "At The Pouma Academy you activate what you already know and learn to express yourself with clarity, ease and confidence — in everyday life, in meetings, in interviews and in presentations.",
     "cta1": "Begin Your Journey",
     "cta2": "View Programs",
     "whyName": "why we named it The Pouma Academy",
@@ -60,7 +60,7 @@
       "I lose opportunities because I stay silent.",
       "I want to, but something stops me."
     ],
-    "programsLabel": "Course Programs",
+    "programsLabel": "See the programs",
     "servicesLabel": "My services",
     "aboutLabel": "Who I am",
     "aboutMore": "More about me",
@@ -76,24 +76,20 @@
   },
   "intro": {
     "eyebrow": "Why The Pouma Academy",
-    "headline1": "You know English.",
-    "headline2": "But you freeze the moment you have to speak.",
-    "lead": "I'm Dimitra. I don't teach you grammar one more time — I help you find your voice, express yourself with confidence, and claim the opportunities you deserve.",
+    "headline1": "You don't need another beginning from zero.",
+    "headline2": "You need to turn what you know into speech.",
     "cards": [
       {
-        "tag": "Who I am",
-        "title": "A communication coach — not another language school",
-        "desc": "Many years of teaching across Greece, Europe & the USA. A boutique academy that sees the person behind the language."
+        "title": "You know what you want to say",
+        "desc": "But it takes you too long to find the right words."
       },
       {
-        "tag": "Your problem",
-        "title": "You know the theory, but freeze when it matters",
-        "desc": "Meetings, interviews, presentations: you freeze, say \"yes\" and \"ok\", and lose opportunities because you can't express yourself the way you deserve."
+        "title": "You sound simpler than you think",
+        "desc": "And you never show your real level."
       },
       {
-        "tag": "How I solve it",
-        "title": "Personalized coaching in groups of 3–4",
-        "desc": "We focus on expression and confidence — not endless exercises. You speak from day one, with material built around you."
+        "title": "In the moments that matter, you freeze",
+        "desc": "In meetings, interviews and presentations you say far less than you actually can."
       }
     ],
     "cta": "Book a free intro"

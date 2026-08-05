@@ -72,17 +72,19 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[color:var(--editorial-cream)]/12" aria-hidden />
       {feathered && (
         <>
-          {/* Left edge dissolves into the ivory column so there is no frame. */}
+          {/* Left edge dissolves into the ivory column so there is no frame.
+              Kept short now that the frame itself is small, so the fade softens
+              the edge without eating into her. */}
           <div
-            className="absolute inset-y-0 left-0 w-[62%] bg-gradient-to-r from-[color:var(--editorial-cream)] via-[color:var(--editorial-cream)]/72 to-transparent"
+            className="absolute inset-y-0 left-0 w-[38%] bg-gradient-to-r from-[color:var(--editorial-cream)] via-[color:var(--editorial-cream)]/62 to-transparent"
             aria-hidden
           />
           <div
-            className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[color:var(--editorial-cream)] to-transparent"
+            className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[color:var(--editorial-cream)] to-transparent"
             aria-hidden
           />
           <div
-            className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-[color:var(--editorial-cream-deep)] via-[color:var(--editorial-cream)]/55 to-transparent"
+            className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[color:var(--editorial-cream-deep)] via-[color:var(--editorial-cream)]/50 to-transparent"
             aria-hidden
           />
         </>
@@ -97,21 +99,21 @@ export default function HeroSection() {
       initial={{ opacity: 0, y: 18 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.9, delay: 0.75, ease: EASE_LUXURY }}
-      className="card-editorial px-6 py-5 sm:px-7 sm:py-6"
+      className="card-editorial px-5 py-4 sm:px-6 sm:py-5"
     >
-      <p className="font-display text-[1.28rem] sm:text-[1.4rem] leading-tight text-plum tracking-tight">
+      <p className="font-display text-[1.18rem] sm:text-[1.3rem] leading-tight text-plum tracking-tight">
         {founderName}
       </p>
-      <p className="mt-1.5 text-[13px] leading-snug text-editorial-body">
+      <p className="mt-1.5 text-[12px] leading-snug text-editorial-body">
         {tHero("photoBadge")} · {tHero("founderCredential")}
       </p>
-      <span className="rule-bronze my-4" aria-hidden />
-      <p className="text-[13px] font-medium text-lav-700">
+      <span className="rule-bronze my-3.5" aria-hidden />
+      <p className="text-[12px] font-medium text-lav-700">
         {tHero("founderEyebrow")}, {tBrand("name")}
       </p>
       <Link
         href={`/${locale}/about`}
-        className="group/link mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-lav-700 hover:text-plum transition-colors"
+        className="group/link mt-3 inline-flex items-center gap-1.5 text-[12.5px] font-semibold text-lav-700 hover:text-plum transition-colors"
       >
         {tHero("aboutMore")}
         <Chevron className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5" />
@@ -126,20 +128,21 @@ export default function HeroSection() {
     >
       <PumaHeroBackdrop />
 
-      {/* DESKTOP — the photograph is the right half of the spread, full bleed:
+      {/* DESKTOP — the photograph sits in the right margin of the spread,
           anchored to the bottom-right corner and feathered on every edge, so it
-          reads as part of the page rather than a picture placed on it. The box
-          carries the photo's own 599:758 ratio, so nothing of her is cropped —
-          the whole frame is shown, only its edges dissolve into the ivory. */}
+          reads as part of the page rather than a picture placed on it. Kept
+          deliberately small per the client's note: it accompanies the message,
+          it does not compete with it. The box carries the photo's own 599:758
+          ratio, so nothing of her is cropped — only the edges dissolve. */}
       <div
-        className="hidden lg:block absolute bottom-0 right-0 h-[94%] w-auto aspect-[599/758] max-w-[52%] z-0"
+        className="hidden lg:block absolute bottom-0 right-0 h-[74%] w-auto aspect-[599/758] max-w-[40%] z-0"
         aria-hidden
       >
         {photo(true)}
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-10">
-        <div className="lg:max-w-[48%] xl:max-w-[46%] lg:pb-14">
+        <div className="lg:max-w-[54%] xl:max-w-[52%] lg:pb-14">
           <HeroWorkshopButton />
 
           <motion.p
@@ -201,70 +204,54 @@ export default function HeroSection() {
             </Link>
           </motion.div>
 
+          {/* Trust strip — four proofs on one hairline rule, separated by thin
+              dividers instead of boxes. Discreet by request: the gold survives
+              only in the marks themselves and in the rule above them, which is
+              all the reference gives it. */}
+          <motion.ul
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.72, ease: EASE_LUXURY }}
+            className="relative mt-9 grid grid-cols-2 border-t border-[color:var(--editorial-line)] pt-1 xl:grid-cols-4"
+          >
+            <span className="rule-bronze absolute -top-px left-0" aria-hidden />
+            {facts.map((fact, i) => {
+              const Icon = TRUST_ICONS[i % TRUST_ICONS.length];
+              return (
+                <li
+                  key={fact}
+                  className="group flex items-start gap-2.5 border-l border-[color:var(--editorial-line)] px-3.5 py-3.5 odd:border-l-0 odd:pl-0 xl:odd:border-l xl:odd:pl-3.5 xl:first:border-l-0 xl:first:pl-0"
+                >
+                  <Icon
+                    className="mt-px h-[18px] w-[18px] shrink-0 text-gold-500 transition-colors duration-300 group-hover:text-gold-600"
+                    aria-hidden
+                  />
+                  <span className="text-[11.5px] font-medium leading-[1.45] text-editorial-body transition-colors duration-300 group-hover:text-plum">
+                    {fact}
+                  </span>
+                </li>
+              );
+            })}
+          </motion.ul>
         </div>
 
-        {/* Trust strip — four proofs, each in its own card, wearing the site's
-            original gold exactly: the gold-200 wash, the gold-400 hairline and
-            the gold glow are on permanently rather than only on hover, with the
-            same gold icon tile and the same sweep the other cards use. */}
-        <motion.ul
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.72, ease: EASE_LUXURY }}
-          className="mt-10 grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:mt-0 lg:grid-cols-4 lg:max-w-[72%] xl:max-w-[70%]"
-        >
-          {facts.map((fact, i) => {
-            const Icon = TRUST_ICONS[i % TRUST_ICONS.length];
-            return (
-              <motion.li
-                key={fact}
-                whileHover={{
-                  y: -6,
-                  transition: { type: "spring", stiffness: 320, damping: 18 },
-                }}
-                className="group relative flex items-center gap-3 overflow-hidden rounded-2xl border border-gold-400 bg-gold-200/75 px-4 py-4 shadow-gold-glow backdrop-blur-sm transition-[border-color,background-color,box-shadow] duration-300 hover:border-gold-500 hover:bg-gold-300/60"
-              >
-                {/* Gold sweep that wipes across on hover */}
-                <span
-                  className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-gold-300/35 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
-                  aria-hidden
-                />
-                {/* Top accent bar grows in on hover */}
-                <span
-                  className="pointer-events-none absolute left-0 top-0 h-[3px] w-full origin-left scale-x-0 bg-gradient-to-r from-gold-400 to-gold-300 transition-transform duration-400 ease-out group-hover:scale-x-100"
-                  aria-hidden
-                />
-                <span
-                  className="relative inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gold-300/50 bg-gradient-to-br from-gold-300/80 to-lav-100 text-gold-600 ring-1 ring-gold-200/50 shadow-soft transition-colors duration-300 group-hover:from-gold-400/80"
-                  aria-hidden
-                >
-                  <Icon className="h-[21px] w-[21px]" />
-                </span>
-                <span className="relative text-[12px] font-medium leading-[1.35] text-plum">{fact}</span>
-              </motion.li>
-            );
-          })}
-        </motion.ul>
-
-        {/* MOBILE — the same photograph, still frameless, as a full-bleed band. */}
-        <div className="lg:hidden relative -mx-5 sm:-mx-6 mt-10 aspect-[599/758]">
+        {/* MOBILE — the same photograph, kept small and centred so the message
+            still leads the screen. */}
+        <div className="lg:hidden relative mx-auto mt-10 w-[74%] max-w-[17rem] aspect-[599/758] overflow-hidden rounded-2xl border border-[color:var(--editorial-line)]">
           {photo(false)}
           <div
-            className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[color:var(--editorial-cream)] to-transparent"
-            aria-hidden
-          />
-          <div
-            className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[color:var(--editorial-cream-deep)] to-transparent"
+            className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[color:var(--editorial-cream-deep)] to-transparent"
             aria-hidden
           />
         </div>
 
-        <div className="lg:hidden relative -mt-16 pb-14">{founderPlate}</div>
+        <div className="lg:hidden relative -mt-12 pb-14">{founderPlate}</div>
       </div>
 
       {/* The plate rides over the photograph on desktop and runs off the right
-          edge of the page, the way it does in the reference. */}
-      <div className="hidden lg:block absolute bottom-16 right-0 z-20 w-[24rem] xl:w-[26rem]">
+          edge of the page, the way it does in the reference. Scaled down with
+          the photograph so the two stay in proportion. */}
+      <div className="hidden lg:block absolute bottom-12 right-0 z-20 w-[20rem] xl:w-[21.5rem]">
         <div className="rounded-l-xl overflow-hidden">{founderPlate}</div>
       </div>
     </section>
