@@ -1,4 +1,11 @@
-import HeroSection from "@/components/sections/HeroSection";
+import HomeHero from "@/components/home/HomeHero";
+import AffectsSection from "@/components/home/AffectsSection";
+import ProgramsShowcase from "@/components/home/ProgramsShowcase";
+import SpeakingMethodSection from "@/components/home/SpeakingMethodSection";
+import WhyPumaSection from "@/components/home/WhyPumaSection";
+import DimitraSection from "@/components/home/DimitraSection";
+import FirstStepSection from "@/components/home/FirstStepSection";
+
 import IntroSection from "@/components/sections/IntroSection";
 import EmpathyBand from "@/components/sections/EmpathyBand";
 import PhilosophySection from "@/components/sections/PhilosophySection";
@@ -12,15 +19,24 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import CtaSection from "@/components/sections/CtaSection";
 
 /**
- * Homepage order follows the client-approved mockups: the hero states the
- * problem, the three cards name it, the rotator lets her hear herself in it,
- * the method shows the path, the specialisations sit right underneath it, and
- * the plum puma band closes the page just above the final invitation.
+ * The homepage follows the layout the client approved (ρεπο): the dark hero
+ * states the promise, "Αυτό σε αφορά αν…" lets her recognise herself, the
+ * programmes and the Speaking Method explain what happens, then Γιατί Πούμα
+ * and Η Δήμητρα give it a face.
+ *
+ * Everything the site had before is kept, running underneath, and the booking
+ * band closes the page so the contact details are the last thing on screen.
  */
 export default function HomePage() {
   return (
     <>
-      <HeroSection />
+      <HomeHero />
+      <AffectsSection />
+      <ProgramsShowcase />
+      <SpeakingMethodSection />
+      <WhyPumaSection />
+      <DimitraSection />
+
       <IntroSection />
       <EmpathyBand />
       <MethodSection />
@@ -32,6 +48,8 @@ export default function HomePage() {
       <PumaClawDivider className="bg-plum" tone="dark" />
       <PumaStory />
       <CtaSection />
+
+      <FirstStepSection />
     </>
   );
 }

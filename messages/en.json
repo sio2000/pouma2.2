@@ -163,10 +163,22 @@
     "groupSizeLabel": "Group size",
     "groupSize": "3–4 max",
     "items": [
-      { "title": "Assessment Before Start", "desc": "We deeply understand where you are and where you want to go." },
-      { "title": "Material Made for You", "desc": "No standardized books. Every resource is specifically selected." },
-      { "title": "Deep Feedback", "desc": "Detailed, actionable feedback after every meeting." },
-      { "title": "Measurable Progress", "desc": "You see your progress at every stage of the journey." }
+      {
+        "title": "Assessment Before Start",
+        "desc": "We deeply understand where you are and where you want to go."
+      },
+      {
+        "title": "Material Made for You",
+        "desc": "No standardized books. Every resource is specifically selected."
+      },
+      {
+        "title": "Deep Feedback",
+        "desc": "Detailed, actionable feedback after every meeting."
+      },
+      {
+        "title": "Measurable Progress",
+        "desc": "You see your progress at every stage of the journey."
+      }
     ]
   },
   "communication": {
@@ -233,9 +245,18 @@
     "headline2": "Never more.",
     "body": "This is not a classroom. It is private coaching in a small group. Every meeting is focused, deep and personalized. We see you as a person, not a student.",
     "items": [
-      { "number": "3–4", "label": "people maximum" },
-      { "number": "70'", "label": "focused meeting" },
-      { "number": "100%", "label": "personalized material" }
+      {
+        "number": "3–4",
+        "label": "people maximum"
+      },
+      {
+        "number": "70'",
+        "label": "focused meeting"
+      },
+      {
+        "number": "100%",
+        "label": "personalized material"
+      }
     ]
   },
   "difference": {
@@ -350,7 +371,13 @@
       "sessionLength": "70' each",
       "groupSize": "3–4 people",
       "description": "For those who feel that lack of grammar foundation prevents them from expressing themselves freely. We rebuild the foundations with real communication as the goal.",
-      "focuses": ["Grammar as Expression Tool", "Pronunciation & Confidence", "Real Conversations", "Personalized Material", "Feedback Every Meeting"]
+      "focuses": [
+        "Grammar as Expression Tool",
+        "Pronunciation & Confidence",
+        "Real Conversations",
+        "Personalized Material",
+        "Feedback Every Meeting"
+      ]
     },
     "path2": {
       "number": "02",
@@ -359,7 +386,13 @@
       "tag": "Evolution",
       "tagColor": "purple",
       "description": "Do you have the skills but struggle to express yourself naturally? This path is for you. We focus on fluid, natural communication.",
-      "focuses": ["High-Value Vocabulary", "Natural Speech & Rhythm", "Fluency Without Hesitation", "Professional Language", "Real-Life Scenarios"]
+      "focuses": [
+        "High-Value Vocabulary",
+        "Natural Speech & Rhythm",
+        "Fluency Without Hesitation",
+        "Professional Language",
+        "Real-Life Scenarios"
+      ]
     },
     "path3": {
       "number": "03",
@@ -368,7 +401,13 @@
       "tag": "Mastery",
       "tagColor": "gold",
       "description": "For professionals and executives who want to master professional communication. Presentations, meetings, leadership presence.",
-      "focuses": ["Meetings & Negotiations", "Presentations & Public Speaking", "Leadership Communication", "Strategic Thinking & Rhetoric", "Executive Presence"]
+      "focuses": [
+        "Meetings & Negotiations",
+        "Presentations & Public Speaking",
+        "Leadership Communication",
+        "Strategic Thinking & Rhetoric",
+        "Executive Presence"
+      ]
     },
     "path4": {
       "number": "04",
@@ -377,14 +416,25 @@
       "tag": "Personalized",
       "tagColor": "lavender",
       "description": "Have a specific goal? We design a program exclusively around it.",
-      "goals": ["Job Interviews", "Cambridge & IELTS", "Speaking Clubs", "Specific Professional Roles", "International Exams", "Any Goal"]
+      "goals": [
+        "Job Interviews",
+        "Cambridge & IELTS",
+        "Speaking Clubs",
+        "Specific Professional Roles",
+        "International Exams",
+        "Any Goal"
+      ]
     },
     "cta": {
       "badge": "Free introduction",
       "headline": "Not sure which path suits you?",
       "body": "Book a free introductory assessment. We'll find it together.",
       "button": "Book Free Assessment",
-      "perks": ["No commitment", "Personalized guidance", "Reply within 24h"]
+      "perks": [
+        "No commitment",
+        "Personalized guidance",
+        "Reply within 24h"
+      ]
     }
   },
   "about": {
@@ -403,10 +453,22 @@
     "values": {
       "label": "What I Believe",
       "items": [
-        { "title": "The person comes first", "desc": "I deeply understand each person before I design anything." },
-        { "title": "Expression is power", "desc": "My goal is not for you to learn English. It is for you to find your voice." },
-        { "title": "No one is left behind", "desc": "Every person has their own rhythm and their own worth." },
-        { "title": "Change is human", "desc": "I don't create good students. I create people who dare." }
+        {
+          "title": "The person comes first",
+          "desc": "I deeply understand each person before I design anything."
+        },
+        {
+          "title": "Expression is power",
+          "desc": "My goal is not for you to learn English. It is for you to find your voice."
+        },
+        {
+          "title": "No one is left behind",
+          "desc": "Every person has their own rhythm and their own worth."
+        },
+        {
+          "title": "Change is human",
+          "desc": "I don't create good students. I create people who dare."
+        }
       ]
     },
     "mission": {
@@ -430,8 +492,21 @@
       "message": "Tell us a little about yourself",
       "submit": "Send Request",
       "success": "Thank you! We will contact you within 24 hours.",
-      "levels": ["Beginner", "Elementary", "Intermediate", "Upper-Intermediate", "Advanced"],
-      "goals": ["Professional Advancement", "Confidence & Presence", "Exams (IELTS/Cambridge)", "Presentations & Public Speaking", "Job Interviews", "Everyday Communication"]
+      "levels": [
+        "Beginner",
+        "Elementary",
+        "Intermediate",
+        "Upper-Intermediate",
+        "Advanced"
+      ],
+      "goals": [
+        "Professional Advancement",
+        "Confidence & Presence",
+        "Exams (IELTS/Cambridge)",
+        "Presentations & Public Speaking",
+        "Job Interviews",
+        "Everyday Communication"
+      ]
     },
     "info": {
       "title": "Information",
@@ -487,5 +562,154 @@
     "contact": "Contact",
     "copyright": "© 2025 The Pouma Academy. All rights reserved.",
     "poweredBy": "Powered by"
+  },
+  "home": {
+    "nav": {
+      "cta": "Book a free assessment"
+    },
+    "hero": {
+      "eyebrow": "English for Professionals – Speaking & Communication",
+      "line1": "You know English.",
+      "line2": "It is time to stop",
+      "line3": "being afraid to speak it.",
+      "lead": "You do not need more theory. You need guidance, practice that means something and a strategy that sounds like you — so you speak with confidence, ease and influence.",
+      "cta": "Book a free assessment",
+      "badges": [
+        "Small groups of 2–3",
+        "A focused approach",
+        "Progress you can measure"
+      ]
+    },
+    "affects": {
+      "title": "This is for you if…",
+      "items": [
+        {
+          "text": "You want to grow professionally, but communication is holding you back.",
+          "image": "/affects/affect-career.jpg",
+          "alt": "Professional at a window overlooking the city"
+        },
+        {
+          "text": "You understand everything, but the moment you have to speak you freeze or hesitate.",
+          "image": "/affects/affect-growth.jpg",
+          "alt": "A plant growing through cracked ground"
+        },
+        {
+          "text": "You have ideas to present, meetings to join and audiences to speak to.",
+          "image": "/affects/affect-speak.jpg",
+          "alt": "Vintage microphone"
+        },
+        {
+          "text": "You are looking for a practical method that gets you speaking and leads to results.",
+          "image": "/affects/affect-method.jpg",
+          "alt": "Brass compass"
+        }
+      ]
+    },
+    "programs": {
+      "title": "Our programmes",
+      "more": "Learn more",
+      "badge": "Certification pending",
+      "main": [
+        {
+          "title": "Grammar & Speaking Foundations",
+          "desc": "Strong grammar and vocabulary foundations, aimed at clear and accurate expression."
+        },
+        {
+          "title": "Speaking Reset",
+          "desc": "Freedom from the blocks and the hesitation. You find your flow and your natural voice again."
+        },
+        {
+          "title": "Speaking Practice",
+          "desc": "Practice on real subjects, with focused feedback and strategic improvement."
+        },
+        {
+          "title": "Professional Soft Skills Certification",
+          "desc": "Top-level soft skills with an international mark. Communication with influence. Leadership with substance.",
+          "featured": true
+        }
+      ],
+      "extra": [
+        {
+          "title": "Job Interview Preparation",
+          "desc": "Preparation that sets you apart. Answers with structure, confidence and a professional profile."
+        },
+        {
+          "title": "Advanced Communication Strategy in English",
+          "desc": "Communication strategy for leaders and professionals who want to influence and inspire."
+        },
+        {
+          "title": "Private Lessons",
+          "desc": "One-to-one guidance from Dimitra, shaped around your goals."
+        }
+      ]
+    },
+    "method": {
+      "title": "The Pouma Speaking Method",
+      "steps": [
+        {
+          "title": "Analysis & Goal",
+          "desc": "We understand your profile, what is holding you back, and set clear, realistic goals."
+        },
+        {
+          "title": "Focused Practice",
+          "desc": "You put it into practice with structured exercises, simulations and real-life communication scenarios."
+        },
+        {
+          "title": "Feedback & Improvement",
+          "desc": "You get quality feedback and correct intelligently, with an eye for the detail that makes the difference."
+        },
+        {
+          "title": "Confidence & Influence",
+          "desc": "You speak with confidence, ease and influence — in every setting, every time."
+        }
+      ]
+    },
+    "whyPuma": {
+      "title": "Why Pouma?",
+      "lead": "The puma moves silently and with absolute focus. It wastes no energy. It observes, it plans and it chooses the right moment.",
+      "traits": [
+        {
+          "title": "Quiet Strength",
+          "desc": "Inner strength that has nothing to prove."
+        },
+        {
+          "title": "Focus",
+          "desc": "A clear eye on the goal, with no distractions."
+        },
+        {
+          "title": "Strategic Movement",
+          "desc": "Every step is considered. No movement is accidental."
+        },
+        {
+          "title": "Confidence",
+          "desc": "A steady presence, even in the most demanding room."
+        },
+        {
+          "title": "Precision",
+          "desc": "Words are chosen with intent and they create results."
+        }
+      ],
+      "closing": "At Pouma Academy you build your own way of communicating — with calm, strategy and precision."
+    },
+    "dimitra": {
+      "title": "Dimitra",
+      "p1": "With many years of experience, I work alongside professionals and executives who want to express their ideas clearly, lead through communication and create real impact.",
+      "p2": "Specialising in teaching English as a second language and in professional communication, I designed the Pouma Speaking Method to help you speak with confidence, ease and influence.",
+      "facts": [
+        "Many years of experience",
+        "Specialised in professional communication",
+        "Small groups of 2–3",
+        "Hundreds of successful professionals"
+      ]
+    },
+    "firstStep": {
+      "title": "Ready to speak",
+      "title2": "with confidence and influence?",
+      "lead": "Book a free 15-minute assessment and we will plan your next step together.",
+      "submit": "Book a free assessment",
+      "note": "We will get in touch to arrange your appointment.",
+      "success": "Thank you! We will get in touch within 24 hours.",
+      "location": "Athens, Greece"
+    }
   }
 }

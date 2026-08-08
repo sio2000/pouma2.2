@@ -409,6 +409,127 @@ body {
   background: linear-gradient(160deg, #F6EEDC 0%, #EFE0C2 100%);
 }
 
+/* ── Homepage: the deep-plum + brass spread ─────────
+   Taken from the layout the client approved (ρεπο): a near-black plum for the
+   dark bands, a muted brass instead of the bright gold, and a warm paper for
+   the light bands in between. Scoped to the homepage sections so the rest of
+   the site keeps its existing palette. */
+:root {
+  --home-ink:        #241640;
+  --home-ink-deep:   #1B0F31;
+  --home-ink-soft:   #33214F;
+  --home-brass:      #C6A15B;
+  --home-brass-soft: #D8BD84;
+  --home-paper:      #F7F2E9;
+  --home-paper-deep: #EFE7D9;
+  --home-line:       #E2D7C3;
+}
+
+.bg-home-ink {
+  background:
+    radial-gradient(ellipse 70% 60% at 15% 0%, rgba(111, 68, 196, 0.22) 0%, transparent 62%),
+    radial-gradient(ellipse 50% 50% at 92% 90%, rgba(198, 161, 91, 0.14) 0%, transparent 60%),
+    linear-gradient(160deg, var(--home-ink) 0%, var(--home-ink-deep) 100%);
+}
+
+.bg-home-paper {
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 0%, #FDFAF4 0%, transparent 62%),
+    linear-gradient(180deg, var(--home-paper) 0%, var(--home-paper-deep) 100%);
+}
+
+.text-brass { color: var(--home-brass); }
+.border-brass { border-color: var(--home-brass); }
+
+/* Serif display used by the homepage headings. */
+.home-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.14;
+}
+
+/* The centred title ornament: hairline, diamond, hairline. */
+.home-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.home-ornament::before,
+.home-ornament::after {
+  content: "";
+  width: 3.5rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--home-brass));
+}
+
+.home-ornament::after {
+  background: linear-gradient(90deg, var(--home-brass), transparent);
+}
+
+/* Round brass-ringed medallion that carries a line mark. */
+.home-medallion {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--home-brass) 62%, transparent);
+  color: var(--home-brass);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s ease,
+    background-color 0.4s ease, color 0.4s ease;
+}
+
+.group:hover .home-medallion {
+  transform: translateY(-3px);
+  border-color: var(--home-brass);
+  background: color-mix(in srgb, var(--home-brass) 14%, transparent);
+}
+
+/* Light card on the paper bands. */
+.home-card {
+  background: #FFFDF8;
+  border: 1px solid var(--home-line);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgba(36, 22, 64, 0.03), 0 14px 34px rgba(36, 22, 64, 0.06);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--home-brass) 65%, transparent);
+  box-shadow: 0 2px 4px rgba(36, 22, 64, 0.05), 0 24px 52px rgba(36, 22, 64, 0.12);
+}
+
+/* Field styling for the dark booking form. */
+.home-field {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  font-size: 0.92rem;
+  transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.home-field::placeholder { color: rgba(255, 255, 255, 0.45); }
+
+.home-field:focus {
+  outline: none;
+  border-color: var(--home-brass);
+  background: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--home-brass) 22%, transparent);
+}
+
+.home-field option { color: #241640; }
+
+@media (max-width: 1023px) {
+  .home-field { font-size: 1rem; min-height: 3rem; }
+}
+
 /* Pre–rebrand palette for selected sections only */
 .legacy-palette {
   --color-ivory: #faf7f2;

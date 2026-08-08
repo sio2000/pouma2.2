@@ -13,6 +13,7 @@ import { EASE_LUXURY } from "@/lib/motion";
 
 export default function Navbar() {
   const t = useTranslations("nav");
+  const tHome = useTranslations("home.nav");
   const brand = useTranslations("brand");
   const locale = useLocale();
   const pathname = usePathname();
@@ -24,7 +25,10 @@ export default function Navbar() {
   // Everywhere else the bar keeps a solid (glass) background from the very top,
   // so the wordmark and links never bleed into the page content while
   // scrolling — it only deepens very slightly once the user starts to scroll.
-  const hasDarkHero = pathname.includes("/workshop/");
+  // The homepage now opens on the deep-plum hero, so it joins the workshop
+  // pages in wanting a transparent bar with light text until the user scrolls.
+  const isHomePath = pathname === `/${locale}` || pathname === `/${locale}/`;
+  const hasDarkHero = pathname.includes("/workshop/") || isHomePath;
   const bgOpacity = useTransform(scrollY, [0, 60], hasDarkHero ? [0, 1] : [0.97, 1]);
   const borderOpacity = useTransform(scrollY, [0, 80], hasDarkHero ? [0, 1] : [0.55, 1]);
   const [scrolled, setScrolled] = useState(false);
@@ -54,12 +58,10 @@ export default function Navbar() {
     return pathname.startsWith(full);
   };
 
-  const isHome =
-    pathname === `/${locale}` || pathname === `/${locale}/`;
+  const isHome = isHomePath;
 
   // Pages with a dark, full-bleed hero need light nav text until the user
-  // scrolls and the (light) glass background fades in. The homepage hero is
-  // light, so it follows the default (dark-text) nav styling.
+  // scrolls and the (light) glass background fades in.
   const onDark = hasDarkHero && !scrolled;
 
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -96,7 +98,7 @@ export default function Navbar() {
             <motion.div
               whileHover={{ scale: 1.05, rotate: -2 }}
               transition={{ type: "spring", stiffness: 400, damping: 20 }}
-              className="relative w-[4.5rem] h-[4.5rem] sm:w-[7rem] sm:h-[7rem] flex-shrink-0"
+              className="relative w-[4.5rem] h-[4.5rem] sm:w-[7rem] sm:h-[7rem] lg:w-[5rem] lg:h-[5rem] xl:w-[6.5rem] xl:h-[6.5rem] flex-shrink-0"
             >
               <Image
                 src="/finallogo.png"
@@ -119,13 +121,13 @@ export default function Navbar() {
               </span>
               <span
                 className={cn(
-                  "font-script text-[13px] sm:text-sm block leading-tight mt-0.5 sm:mt-1 pl-0.5 whitespace-normal transition-colors duration-300",
+                  "font-script text-[13px] sm:text-sm block leading-tight mt-0.5 sm:mt-1 pl-0.5 whitespace-normal transition-colors duration-300 lg:hidden xl:block",
                   onDark ? "text-white/75" : "text-plum"
                 )}
               >
                 {brand("tagline")}
               </span>
-              <span className="relative inline-block mt-1 pl-0.5">
+              <span className="relative inline-block mt-1 pl-0.5 lg:hidden xl:inline-block">
                 <span
                   className={cn(
                     "font-sans text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.3em] transition-colors duration-300",
@@ -161,7 +163,7 @@ export default function Navbar() {
                 href={lp(link.href)}
                 onMouseEnter={() => setHovered(link.href)}
                 className={cn(
-                  "relative px-4 py-2.5 text-sm font-medium tracking-wide rounded-xl transition-colors duration-300",
+                  "relative whitespace-nowrap px-2.5 xl:px-3.5 py-2.5 text-[12.5px] xl:text-[13.5px] font-medium tracking-wide rounded-xl transition-colors duration-300",
                   isActive(link.href)
                     ? onDark
                       ? "text-white"
@@ -197,7 +199,14 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <div className="hidden lg:flex items-center gap-5">
+          <div className="hidden lg:flex items-center gap-4">
+            {/* The brass booking button the reference header carries. */}
+            <Link
+              href={lp("/contact")}
+              className="group inline-flex items-center gap-2 rounded-md bg-gradient-to-b from-[color:var(--home-brass-soft)] to-[color:var(--home-brass)] px-5 py-2.5 text-[13px] font-semibold text-[color:var(--home-ink-deep)] shadow-[0_8px_22px_rgba(198,161,91,0.26)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(198,161,91,0.38)]"
+            >
+              {tHome("cta")}
+            </Link>
             <LanguageSwitcher />
           </div>
 
@@ -285,6 +294,13 @@ export default function Navbar() {
                 transition={{ delay: 0.3 }}
                 className="flex flex-col gap-6 border-t border-white/10 pt-8 mt-2"
               >
+                <Link
+                  href={lp("/contact")}
+                  onClick={() => setMenuOpen(false)}
+                  className="inline-flex items-center justify-center rounded-md bg-gradient-to-b from-[color:var(--home-brass-soft)] to-[color:var(--home-brass)] px-6 py-4 text-[15px] font-semibold text-[color:var(--home-ink-deep)]"
+                >
+                  {tHome("cta")}
+                </Link>
                 <LanguageSwitcher variant="mobile" />
               </motion.div>
             </div>
