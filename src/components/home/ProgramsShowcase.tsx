@@ -74,7 +74,7 @@ export default function ProgramsShowcase() {
                 transition={{ duration: 0.75, delay: 0.15 + i * 0.1, ease: EASE_LUXURY }}
                 className={
                   featured
-                    ? "group relative flex flex-col rounded-xl border-2 border-[color:var(--home-brass)] bg-home-ink p-7 pt-9 text-center shadow-[0_20px_50px_rgba(36,22,64,0.28)] transition-transform duration-500 hover:-translate-y-1.5"
+                    ? "home-card-dark group flex flex-col rounded-xl border-2 border-[color:var(--home-brass)] bg-home-ink p-7 pt-9 text-center shadow-[0_20px_50px_rgba(36,22,64,0.28)]"
                     : "home-card group flex flex-col p-7 text-center"
                 }
               >

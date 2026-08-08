@@ -57,7 +57,7 @@ export default function SpeakingMethodSection() {
                   initial={{ opacity: 0, y: 26 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.75, delay: 0.4 + i * 0.13, ease: EASE_LUXURY }}
-                  className="group flex flex-col items-center px-4 text-center md:px-6"
+                  className="home-card-dark group flex flex-col items-center rounded-2xl border border-transparent px-4 pb-6 pt-2 text-center md:px-6"
                 >
                   <span className="relative">
                     <span className="home-medallion h-[4.4rem] w-[4.4rem] bg-[color:var(--home-ink)]">

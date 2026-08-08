@@ -487,20 +487,123 @@ body {
   background: color-mix(in srgb, var(--home-brass) 14%, transparent);
 }
 
-/* Light card on the paper bands. */
+/* Light card on the paper bands. On hover it takes the same gold treatment the
+   cards further down the page already use: the gold wash, the gold hairline,
+   the gold glow, the bar growing in along the top and the shine sweeping
+   across. */
 .home-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   background: #FFFDF8;
   border: 1px solid var(--home-line);
   border-radius: 0.75rem;
   box-shadow: 0 1px 2px rgba(36, 22, 64, 0.03), 0 14px 34px rgba(36, 22, 64, 0.06);
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s ease,
-    box-shadow 0.4s ease;
+    background-color 0.4s ease, box-shadow 0.4s ease;
 }
+
+/* The shine that wipes across. The card isolates its own stacking context, so
+   the two decorative layers sit above its background but under its content
+   without having to touch the children. */
+.home-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--color-gold-300) 35%, transparent),
+    transparent
+  );
+  transition: transform 0.7s ease-out;
+}
+
+.home-card:hover::before { transform: translateX(100%); }
+
+/* The bar that grows in along the top edge. */
+.home-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  pointer-events: none;
+  height: 3px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(90deg, var(--color-gold-400), var(--color-gold-300));
+  transition: transform 0.4s ease-out;
+}
+
+.home-card:hover::after { transform: scaleX(1); }
 
 .home-card:hover {
   transform: translateY(-6px);
-  border-color: color-mix(in srgb, var(--home-brass) 65%, transparent);
-  box-shadow: 0 2px 4px rgba(36, 22, 64, 0.05), 0 24px 52px rgba(36, 22, 64, 0.12);
+  border-color: var(--color-gold-400);
+  background: color-mix(in srgb, var(--color-gold-200) 45%, #FFFDF8);
+  box-shadow:
+    0 0 36px color-mix(in srgb, var(--color-gold-400) 48%, transparent),
+    0 6px 18px color-mix(in srgb, var(--color-gold-500) 28%, transparent);
+}
+
+/* The same gold moment for the dark cards and the steps on the plum bands. */
+.home-card-dark {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s ease,
+    background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.home-card-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--color-gold-300) 22%, transparent),
+    transparent
+  );
+  transition: transform 0.7s ease-out;
+}
+
+.home-card-dark:hover::before { transform: translateX(100%); }
+
+.home-card-dark::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  pointer-events: none;
+  height: 3px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(90deg, var(--color-gold-400), var(--color-gold-300));
+  transition: transform 0.4s ease-out;
+}
+
+.home-card-dark:hover::after { transform: scaleX(1); }
+
+.home-card-dark:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-gold-400);
+  /* Warms towards gold without going light — the copy on these cards is
+     white, so the surface has to stay plum. */
+  background: color-mix(in srgb, var(--color-gold-400) 13%, var(--home-ink));
+  box-shadow:
+    0 0 36px color-mix(in srgb, var(--color-gold-400) 34%, transparent),
+    0 6px 18px rgba(27, 15, 49, 0.4);
 }
 
 /* Field styling for the dark booking form. */
