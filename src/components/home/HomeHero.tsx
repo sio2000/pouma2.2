@@ -27,24 +27,25 @@ export default function HomeHero() {
     <section id="hero" className="relative w-full overflow-hidden bg-home-ink pt-32 sm:pt-36 lg:pt-32">
       {/* The portrait: right half on desktop, held inside a tall arch whose
           left edge is a single brass hairline. */}
-      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] xl:w-[45%] lg:block" aria-hidden>
-        <div className="relative h-full w-full overflow-hidden rounded-bl-[15rem] rounded-tl-[15rem]">
+      <div
+        className="pointer-events-none absolute bottom-0 right-0 top-24 hidden w-[41%] xl:w-[40%] lg:block"
+        aria-hidden
+      >
+        <div className="relative h-full w-full overflow-hidden rounded-bl-[13rem] rounded-tl-[13rem]">
           <Image
-            src="/newherosectionpik.png"
+            src="/newherosectionimage.png"
             alt={`${founderName} — ${tBrand("name")}`}
             fill
             priority
-            sizes="46vw"
-            className="object-cover object-[56%_8%] saturate-[0.6] brightness-[0.72] contrast-[1.05]"
+            sizes="41vw"
+            className="object-cover object-[52%_16%]"
           />
-          {/* Tonal wash so the photo belongs to the plum field rather than
-              sitting on top of it: a plum multiply, then long gradients that
-              take the edges back down into the background colour. */}
-          <div className="absolute inset-0 bg-[color:var(--home-ink)]/45 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[color:var(--home-ink)] via-[color:var(--home-ink)]/45 to-[color:var(--home-ink)]/10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--home-ink-deep)] via-transparent to-[color:var(--home-ink)]/55" />
+          {/* Just enough to blend the left edge into the violet field — the
+              photograph itself is left alone so her colours stay true. */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[color:var(--home-ink)] via-[color:var(--home-ink)]/12 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--home-ink-deep)]/55 via-transparent to-[color:var(--home-ink)]/18" />
         </div>
-        <div className="absolute inset-y-0 left-0 w-px rounded-full bg-gradient-to-b from-transparent via-[color:var(--home-brass)]/45 to-transparent" />
+        <div className="absolute inset-y-0 left-0 w-px rounded-full bg-gradient-to-b from-transparent via-[color:var(--home-brass)]/50 to-transparent" />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-10">
@@ -57,7 +58,7 @@ export default function HomeHero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: EASE_LUXURY }}
-            className="text-[11px] font-medium uppercase tracking-[0.22em] text-brass sm:text-xs"
+            className="text-brass-soft text-[11px] font-medium uppercase tracking-[0.22em] sm:text-xs"
           >
             {t("eyebrow")}
           </motion.p>
@@ -123,8 +124,8 @@ export default function HomeHero() {
               const Icon = BADGE_ICONS[i % BADGE_ICONS.length];
               return (
                 <li key={badge} className="flex items-center gap-2.5">
-                  <Icon className="h-[19px] w-[19px] shrink-0 text-brass" />
-                  <span className="text-[12.5px] text-white/60">{badge}</span>
+                  <Icon className="text-brass-soft h-[19px] w-[19px] shrink-0" />
+                  <span className="text-[12.5px] text-white/72">{badge}</span>
                 </li>
               );
             })}
@@ -134,13 +135,13 @@ export default function HomeHero() {
         {/* Mobile: the same portrait, arched on its top edge, under the copy. */}
         <div className="relative -mx-5 mt-12 h-[58vh] min-h-[360px] overflow-hidden rounded-t-[7rem] sm:-mx-6 lg:hidden">
           <Image
-            src="/newherosectionpik.png"
+            src="/newherosectionimage.png"
             alt={`${founderName} — ${tBrand("name")}`}
             fill
             sizes="100vw"
-            className="object-cover object-[54%_10%] saturate-[0.78]"
+            className="object-cover object-[52%_14%]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--home-ink-deep)] via-transparent to-[color:var(--home-ink)]/45" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--home-ink-deep)] via-transparent to-[color:var(--home-ink)]/25" />
         </div>
       </div>
     </section>

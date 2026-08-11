@@ -64,7 +64,7 @@ export default function SpeakingMethodSection() {
                       <Icon className="h-8 w-8" />
                     </span>
                     {/* The number, on the shoulder of the medallion. */}
-                    <span className="absolute -right-2 -top-1 flex h-7 w-7 items-center justify-center rounded-full border border-[color:var(--home-brass)]/70 bg-[color:var(--home-ink-deep)] font-display text-[13px] text-brass">
+                    <span className="absolute -right-2 -top-1 flex h-7 w-7 items-center justify-center rounded-full border border-[color:var(--home-brass)]/70 bg-[color:var(--home-ink-deep)] font-display text-[13px] text-brass-soft">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                   </span>

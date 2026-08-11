@@ -43,11 +43,11 @@ export default function DimitraSection() {
             alt={founderName}
             fill
             sizes="(max-width: 1024px) 100vw, 38vw"
-            className="object-cover object-[50%_26%] saturate-[0.6] brightness-[0.96] contrast-[1.03]"
+            className="object-cover object-[50%_26%] saturate-[0.72] brightness-[0.99]"
           />
           {/* Warm brass wash so the photograph belongs to the paper band. */}
           <div className="absolute inset-0 bg-[color:var(--home-brass)]/18 mix-blend-multiply" aria-hidden />
-          <div className="absolute inset-0 bg-[color:var(--home-ink)]/10 mix-blend-multiply" aria-hidden />
+          <div className="absolute inset-0 bg-[#241733]/8 mix-blend-multiply" aria-hidden />
           {/* Right edge dissolves into the paper so there is no hard frame. */}
           <div
             className="absolute inset-y-0 right-0 hidden w-1/3 bg-gradient-to-l from-[color:var(--home-paper)] to-transparent lg:block"

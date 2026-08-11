@@ -61,7 +61,7 @@ export default function AffectsSection() {
                 className="group relative pt-7"
               >
                 {/* Medallion, half in and half out of the photograph. */}
-                <span className="home-medallion absolute left-1/2 top-0 z-20 h-14 w-14 -translate-x-1/2 bg-[color:var(--home-ink)]">
+                <span className="home-medallion absolute left-1/2 top-0 z-20 h-14 w-14 -translate-x-1/2 bg-[#241733]">
                   <Icon className="h-6 w-6" />
                 </span>
 
@@ -74,8 +74,8 @@ export default function AffectsSection() {
                     className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
                   />
                   {/* Warm sepia unifier + the reading gradient at the foot. */}
-                  <div className="absolute inset-0 bg-[color:var(--home-brass)]/10 mix-blend-multiply" aria-hidden />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--home-ink-deep)] via-[color:var(--home-ink-deep)]/55 to-transparent" aria-hidden />
+                  <div className="absolute inset-0 bg-[color:var(--home-brass)]/18 mix-blend-multiply" aria-hidden />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#241733] via-[#241733]/55 to-transparent" aria-hidden />
 
                   <p className="absolute inset-x-0 bottom-0 p-5 text-[13.5px] leading-[1.6] text-white/92">
                     {item.text}

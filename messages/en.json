@@ -641,7 +641,14 @@
           "title": "Private Lessons",
           "desc": "One-to-one guidance from Dimitra, shaped around your goals."
         }
-      ]
+      ],
+      "seminars": {
+        "label": "Seminars & Webinars",
+        "title": "Seminars",
+        "desc": "Live seminars and webinars on practical communication topics. See what is coming, read the details and save your place.",
+        "cta": "See the seminars",
+        "live": "Announcements"
+      }
     },
     "method": {
       "title": "The Pouma Speaking Method",

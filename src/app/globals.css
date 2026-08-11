@@ -415,11 +415,16 @@ body {
    the light bands in between. Scoped to the homepage sections so the rest of
    the site keeps its existing palette. */
 :root {
-  --home-ink:        #241640;
-  --home-ink-deep:   #1B0F31;
-  --home-ink-soft:   #33214F;
+  /* The plum bands are pitched at the violet in the logo rather than at
+     near-black, so the page reads warm and open instead of sombre. */
+  --home-ink:        #56349E;
+  --home-ink-deep:   #422778;
+  --home-ink-soft:   #6A45BC;
   --home-brass:      #C6A15B;
-  --home-brass-soft: #D8BD84;
+  --home-brass-soft: #E2CA95;
+  /* Photographs are darkened with a literal #241733 rather than a variable:
+     the band colour is a bright violet now and far too saturated to lay over
+     a picture. */
   --home-paper:      #F7F2E9;
   --home-paper-deep: #EFE7D9;
   --home-line:       #E2D7C3;
@@ -427,18 +432,21 @@ body {
 
 .bg-home-ink {
   background:
-    radial-gradient(ellipse 70% 60% at 15% 0%, rgba(111, 68, 196, 0.22) 0%, transparent 62%),
-    radial-gradient(ellipse 50% 50% at 92% 90%, rgba(198, 161, 91, 0.14) 0%, transparent 60%),
-    linear-gradient(160deg, var(--home-ink) 0%, var(--home-ink-deep) 100%);
+    radial-gradient(ellipse 70% 60% at 15% 0%, rgba(155, 111, 232, 0.34) 0%, transparent 62%),
+    radial-gradient(ellipse 55% 55% at 92% 92%, rgba(198, 161, 91, 0.2) 0%, transparent 62%),
+    linear-gradient(160deg, var(--home-ink-soft) 0%, var(--home-ink) 45%, var(--home-ink-deep) 100%);
 }
 
 .bg-home-paper {
   background:
     radial-gradient(ellipse 60% 50% at 50% 0%, #FDFAF4 0%, transparent 62%),
+    radial-gradient(ellipse 55% 45% at 88% 8%, rgba(155, 111, 232, 0.09) 0%, transparent 60%),
     linear-gradient(180deg, var(--home-paper) 0%, var(--home-paper-deep) 100%);
 }
 
 .text-brass { color: var(--home-brass); }
+/* Lighter brass, for small type sitting on the violet bands. */
+.text-brass-soft { color: var(--home-brass-soft); }
 .border-brass { border-color: var(--home-brass); }
 
 /* Serif display used by the homepage headings. */

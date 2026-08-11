@@ -99,6 +99,15 @@ export const ChatIcon = make(
   </>,
 );
 
+export const BroadcastIcon = make(
+  <>
+    <rect x="3" y="4.5" width="18" height="12" rx="1.8" />
+    <path d="M12 16.5v3.5M8 20h8" />
+    <path d="M9.6 10.5a2.4 2.4 0 014.8 0" />
+    <path d="M7.2 12.4a5 5 0 019.6 0" opacity="0.55" />
+  </>,
+);
+
 /* ── Method steps ────────────────────────────────── */
 export const CompassIcon = make(
   <>

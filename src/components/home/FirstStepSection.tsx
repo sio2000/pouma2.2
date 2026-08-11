@@ -92,17 +92,17 @@ export default function FirstStepSection() {
             className="mt-9 space-y-3.5"
           >
             <li className="flex items-center gap-3">
-              <MailIcon className="h-[18px] w-[18px] shrink-0 text-brass" />
+              <MailIcon className="text-brass-soft h-[18px] w-[18px] shrink-0" />
               <a
                 href={`mailto:${email}`}
-                className="text-[13.5px] text-white/70 transition-colors hover:text-white"
+                className="text-[13.5px] text-white/80 transition-colors hover:text-white"
               >
                 {email}
               </a>
             </li>
             <li className="flex items-center gap-3">
-              <PinIcon className="h-[18px] w-[18px] shrink-0 text-brass" />
-              <span className="text-[13.5px] text-white/70">{t("location")}</span>
+              <PinIcon className="text-brass-soft h-[18px] w-[18px] shrink-0" />
+              <span className="text-[13.5px] text-white/80">{t("location")}</span>
             </li>
           </motion.ul>
 
@@ -123,7 +123,7 @@ export default function FirstStepSection() {
         >
           {submitted ? (
             <div className="flex min-h-[20rem] items-center justify-center rounded-lg border border-[color:var(--home-brass)]/40 bg-white/5 p-10 text-center">
-              <p className="home-display text-[1.3rem] text-brass">{t("success")}</p>
+              <p className="home-display text-brass-soft text-[1.3rem]">{t("success")}</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-3.5">
