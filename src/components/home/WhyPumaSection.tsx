@@ -30,18 +30,21 @@ export default function WhyPumaSection() {
   return (
     <section className="relative overflow-hidden bg-home-paper">
       <div className="home-container grid grid-cols-1 items-center gap-10 py-14 md:py-18 lg:grid-cols-[36%_64%] lg:gap-8">
-        {/* The drawing. A faint compass grid sits behind it, as in the
-            reference, so the animal reads as an engraving rather than a logo. */}
+        {/* The puma as the client picked it: the solid amber cat on a deep plum
+            plate. It needs the dark ground — the same shape in amber on the
+            beige band would all but disappear — so the drawing gets its own
+            panel, with the faint compass grid behind it and a brass hairline
+            around it. */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 1.1, ease: EASE_LUXURY }}
-          className="relative order-2 lg:order-1"
+          className="relative order-2 overflow-hidden rounded-2xl bg-[#211539] px-6 py-8 ring-1 ring-[color:var(--home-brass)]/25 lg:order-1"
           aria-hidden
         >
           <svg
             viewBox="0 0 400 400"
-            className="pointer-events-none absolute inset-0 h-full w-full text-[color:var(--home-brass)]/25"
+            className="pointer-events-none absolute inset-0 h-full w-full text-[color:var(--home-brass)]/22"
             fill="none"
             stroke="currentColor"
             strokeWidth="0.7"
@@ -50,21 +53,20 @@ export default function WhyPumaSection() {
             <circle cx="200" cy="185" r="110" />
             <path d="M50 185h300M200 35v300M94 79l212 212M306 79L94 291" />
           </svg>
-          {/* Drawn as a brass outline rather than a filled shape, so it reads
-              as the engraving in the reference. The silhouette takes its colour
-              from the brand gold variables, so they are re-pointed at the
-              homepage brass just for this instance. */}
+          {/* The silhouette paints itself from the brand gold variables, so all
+              three stops are re-pointed at one amber to get the flat, solid
+              fill rather than the gold-to-lavender gradient. */}
           <div
-            className="relative px-6 lg:px-0"
+            className="relative"
             style={
               {
-                "--color-gold-300": "var(--home-brass-soft)",
-                "--color-gold-400": "var(--home-brass)",
-                "--color-lav-500": "var(--home-brass)",
+                "--color-gold-300": "#EFA93C",
+                "--color-gold-400": "#EFA93C",
+                "--color-lav-500": "#EFA93C",
               } as React.CSSProperties
             }
           >
-            <PumaSilhouette gradientId="why-puma-home" variant="outline" />
+            <PumaSilhouette gradientId="why-puma-home" />
           </div>
         </motion.div>
 
