@@ -203,7 +203,7 @@ export default function Navbar() {
             {/* The brass booking button the reference header carries. */}
             <Link
               href={lp("/contact")}
-              className="group inline-flex items-center gap-2 rounded-md bg-gradient-to-b from-[color:var(--home-brass-soft)] to-[color:var(--home-brass)] px-5 py-2.5 text-[13px] font-semibold text-[color:var(--home-ink-deep)] shadow-[0_8px_22px_rgba(198,161,91,0.26)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(198,161,91,0.38)]"
+              className="btn-brass group px-5 py-2.5 text-[13px]"
             >
               {tHome("cta")}
             </Link>
@@ -297,7 +297,7 @@ export default function Navbar() {
                 <Link
                   href={lp("/contact")}
                   onClick={() => setMenuOpen(false)}
-                  className="inline-flex items-center justify-center rounded-md bg-gradient-to-b from-[color:var(--home-brass-soft)] to-[color:var(--home-brass)] px-6 py-4 text-[15px] font-semibold text-[color:var(--home-ink-deep)]"
+                  className="btn-brass px-6 py-4 text-[15px]"
                 >
                   {tHome("cta")}
                 </Link>

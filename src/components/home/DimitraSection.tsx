@@ -59,12 +59,12 @@ export default function DimitraSection() {
           />
         </motion.div>
 
-        <div ref={ref} className="px-5 py-16 sm:px-6 md:py-20 lg:pl-6 lg:pr-10">
+        <div ref={ref} className="px-5 py-12 sm:px-6 md:py-16 lg:pl-6 lg:pr-10">
           <motion.h2
             initial={{ opacity: 0, y: 22 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, ease: EASE_LUXURY }}
-            className="home-display text-[color:var(--home-ink)] text-[clamp(1.9rem,4.2vw,2.9rem)]"
+            className="home-display text-[color:var(--home-ink)] text-[clamp(1.7rem,3.2vw,2.35rem)]"
           >
             {t("title")}
           </motion.h2>
@@ -73,7 +73,7 @@ export default function DimitraSection() {
             initial={{ opacity: 0, y: 18 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.15, ease: EASE_LUXURY }}
-            className="mt-7 max-w-2xl text-[14.5px] leading-[1.9] text-[color:var(--home-ink)]/68"
+            className="mt-6 max-w-2xl text-[15px] leading-[1.85] text-[color:var(--home-ink)]/68"
           >
             {t("p1")}
           </motion.p>
@@ -82,7 +82,7 @@ export default function DimitraSection() {
             initial={{ opacity: 0, y: 18 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.26, ease: EASE_LUXURY }}
-            className="mt-5 max-w-2xl text-[14.5px] leading-[1.9] text-[color:var(--home-ink)]/68"
+            className="mt-4 max-w-2xl text-[15px] leading-[1.85] text-[color:var(--home-ink)]/68"
           >
             {t("p2")}
           </motion.p>
@@ -91,14 +91,14 @@ export default function DimitraSection() {
             initial={{ opacity: 0, y: 18 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.38, ease: EASE_LUXURY }}
-            className="mt-11 grid grid-cols-1 gap-x-6 gap-y-5 border-t border-[color:var(--home-line)] pt-8 sm:grid-cols-2 lg:grid-cols-4"
+            className="mt-9 grid grid-cols-1 gap-x-6 gap-y-5 border-t border-[color:var(--home-line)] pt-8 sm:grid-cols-2 lg:grid-cols-4"
           >
             {facts.map((fact, i) => {
               const Icon = FACT_ICONS[i % FACT_ICONS.length];
               return (
                 <li key={fact} className="flex items-start gap-3">
                   <Icon className="mt-0.5 h-[19px] w-[19px] shrink-0 text-brass" />
-                  <span className="text-[12px] leading-[1.5] text-[color:var(--home-ink)]/70">
+                  <span className="text-[13px] leading-[1.5] text-[color:var(--home-ink)]/72">
                     {fact}
                   </span>
                 </li>
@@ -113,7 +113,7 @@ export default function DimitraSection() {
           >
             <Link
               href={`/${locale}/about`}
-              className="group mt-8 inline-flex items-center gap-2 text-[13px] font-semibold text-brass transition-colors hover:text-[color:var(--home-ink)]"
+              className="group mt-8 inline-flex items-center gap-2 text-[13.5px] font-bold text-brass transition-colors hover:text-[color:var(--home-ink)]"
             >
               {tHero("aboutMore")}
               <svg

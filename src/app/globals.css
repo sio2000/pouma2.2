@@ -417,11 +417,12 @@ body {
 :root {
   /* The plum bands are pitched at the violet in the logo rather than at
      near-black, so the page reads warm and open instead of sombre. */
-  --home-ink:        #56349E;
-  --home-ink-deep:   #422778;
-  --home-ink-soft:   #6A45BC;
-  --home-brass:      #C6A15B;
-  --home-brass-soft: #E2CA95;
+  --home-ink:        #58379E;
+  --home-ink-deep:   #452A79;
+  --home-ink-soft:   #7150C2;
+  /* Champagne rather than yellow gold: the same warmth, none of the acid. */
+  --home-brass:      #C2A275;
+  --home-brass-soft: #E4D0AE;
   /* Photographs are darkened with a literal #241733 rather than a variable:
      the band colour is a bright violet now and far too saturated to lay over
      a picture. */
@@ -455,6 +456,43 @@ body {
   font-weight: 400;
   letter-spacing: -0.015em;
   line-height: 1.14;
+}
+
+/* One brass button, one weight, everywhere. The label is set bold and a touch
+   letterspaced so it holds its own against the metal gradient behind it —
+   at semibold it looked thin. */
+.btn-brass {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 0.375rem;
+  background: linear-gradient(180deg, var(--home-brass-soft) 0%, var(--home-brass) 100%);
+  color: #33204F;
+  font-weight: 700;
+  letter-spacing: 0.012em;
+  box-shadow: 0 12px 32px rgba(194, 162, 117, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.btn-brass:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+  box-shadow: 0 16px 40px rgba(194, 162, 117, 0.42);
+}
+
+.btn-brass:disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Two heavier options, kept here so the weight can be switched in one place
+   once the client picks the one she prefers. */
+.btn-brass-heavy { font-weight: 800; letter-spacing: 0.022em; }
+.btn-brass-caps {
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
 }
 
 /* The centred title ornament: hairline, diamond, hairline. */

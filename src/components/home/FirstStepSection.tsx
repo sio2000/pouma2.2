@@ -57,7 +57,7 @@ export default function FirstStepSection() {
   };
 
   return (
-    <section id="first-step" className="relative overflow-hidden bg-home-ink px-5 py-20 sm:px-6 md:py-24">
+    <section id="first-step" className="relative overflow-hidden bg-home-ink px-5 py-14 sm:px-6 md:py-18">
       {/* The puma watching from the corner, barely there. */}
       <div className="pointer-events-none absolute -bottom-10 left-0 w-[26rem] opacity-[0.07] lg:w-[34rem]" aria-hidden>
         <PumaSilhouette gradientId="first-step-puma" />
@@ -69,7 +69,7 @@ export default function FirstStepSection() {
             initial={{ opacity: 0, y: 22 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, ease: EASE_LUXURY }}
-            className="home-display text-white text-[clamp(1.8rem,3.6vw,2.6rem)]"
+            className="home-display text-white text-[clamp(1.65rem,3vw,2.2rem)]"
           >
             {t("title")}
             <br />
@@ -80,7 +80,7 @@ export default function FirstStepSection() {
             initial={{ opacity: 0, y: 18 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.15, ease: EASE_LUXURY }}
-            className="mt-6 max-w-md text-[14.5px] leading-[1.85] text-white/58"
+            className="mt-5 max-w-md text-[15px] leading-[1.8] text-white/70"
           >
             {t("lead")}
           </motion.p>
@@ -89,7 +89,7 @@ export default function FirstStepSection() {
             initial={{ opacity: 0, y: 18 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.28, ease: EASE_LUXURY }}
-            className="mt-9 space-y-3.5"
+            className="mt-7 space-y-3.5"
           >
             <li className="flex items-center gap-3">
               <MailIcon className="text-brass-soft h-[18px] w-[18px] shrink-0" />
@@ -175,12 +175,12 @@ export default function FirstStepSection() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full rounded-md bg-gradient-to-b from-[color:var(--home-brass-soft)] to-[color:var(--home-brass)] px-8 py-4 text-[15px] font-semibold text-[color:var(--home-ink-deep)] shadow-[0_12px_32px_rgba(198,161,91,0.26)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(198,161,91,0.38)] disabled:pointer-events-none disabled:opacity-60"
+                className="btn-brass w-full px-8 py-[0.95rem] text-[15px]"
               >
                 {loading ? "…" : t("submit")}
               </button>
 
-              <p className="pt-1 text-center text-[11.5px] text-white/45">{t("note")}</p>
+              <p className="pt-1 text-center text-[12.5px] text-white/55">{t("note")}</p>
             </form>
           )}
         </motion.div>

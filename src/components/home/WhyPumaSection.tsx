@@ -17,7 +17,7 @@ type Trait = { title: string; desc: string };
 const TRAIT_ICONS = [LotusIcon, EyeIcon, MountainIcon, ShieldIcon, PrecisionIcon];
 
 /**
- * "Γιατί Πούμα;" — the animal drawn on the left in a single brass line over a
+ * "Γιατί Pouma;" — the animal drawn on the left in a single brass line over a
  * faint geometric grid, the meaning on the right. Five traits sit in a row
  * underneath, then one sentence brings it back to the reader.
  */
@@ -29,7 +29,7 @@ export default function WhyPumaSection() {
 
   return (
     <section className="relative overflow-hidden bg-home-paper">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-5 py-20 sm:px-6 md:py-24 lg:grid-cols-[38%_62%] lg:gap-4 lg:px-0">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-5 py-14 sm:px-6 md:py-18 lg:grid-cols-[38%_62%] lg:gap-4 lg:px-0">
         {/* The drawing. A faint compass grid sits behind it, as in the
             reference, so the animal reads as an engraving rather than a logo. */}
         <motion.div
@@ -73,7 +73,7 @@ export default function WhyPumaSection() {
             initial={{ opacity: 0, y: 22 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, ease: EASE_LUXURY }}
-            className="home-display text-center text-[color:var(--home-ink)] text-[clamp(1.9rem,4.2vw,2.9rem)] lg:text-left"
+            className="home-display text-center text-[color:var(--home-ink)] text-[clamp(1.7rem,3.2vw,2.35rem)] lg:text-left"
           >
             {t("title")}
           </motion.h2>
@@ -82,12 +82,12 @@ export default function WhyPumaSection() {
             initial={{ opacity: 0, y: 18 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.15, ease: EASE_LUXURY }}
-            className="mt-6 max-w-2xl text-center text-[14.5px] leading-[1.85] text-[color:var(--home-ink)]/62 lg:text-left"
+            className="mt-5 max-w-2xl text-center text-[15.5px] leading-[1.8] text-[color:var(--home-ink)]/68 lg:text-left"
           >
             {t("lead")}
           </motion.p>
 
-          <div className="mt-12 grid grid-cols-2 gap-x-4 gap-y-9 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">
             {traits.map((trait, i) => {
               const Icon = TRAIT_ICONS[i % TRAIT_ICONS.length];
               return (
@@ -99,10 +99,10 @@ export default function WhyPumaSection() {
                   className="group flex flex-col items-center text-center"
                 >
                   <Icon className="h-8 w-8 text-brass" />
-                  <h3 className="mt-4 text-[13px] font-semibold text-[color:var(--home-ink)]">
+                  <h3 className="mt-4 text-[14px] font-semibold text-[color:var(--home-ink)]">
                     {trait.title}
                   </h3>
-                  <p className="mt-2 text-[11.5px] leading-[1.65] text-[color:var(--home-ink)]/55">
+                  <p className="mt-2 text-[12.5px] leading-[1.6] text-[color:var(--home-ink)]/62">
                     {trait.desc}
                   </p>
                 </motion.div>
@@ -114,7 +114,7 @@ export default function WhyPumaSection() {
             initial={{ opacity: 0, y: 16 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.8, ease: EASE_LUXURY }}
-            className="mt-12 text-center text-[14px] italic text-[color:var(--home-ink)]/72"
+            className="mt-10 text-center text-[15.5px] italic text-[color:var(--home-ink)]/78"
           >
             {t("closing")}
           </motion.p>

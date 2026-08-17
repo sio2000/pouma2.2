@@ -53,18 +53,18 @@ export default function ProgramsShowcase() {
   const href = `/${locale}/programs`;
 
   return (
-    <section className="relative overflow-hidden bg-home-paper px-5 pb-24 pt-10 sm:px-6 md:pt-16">
+    <section className="relative overflow-hidden bg-home-paper px-5 pb-16 pt-6 sm:px-6 md:pt-10">
       <div ref={ref} className="mx-auto max-w-6xl">
         <motion.h2
           initial={{ opacity: 0, y: 22 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.9, ease: EASE_LUXURY }}
-          className="home-display mt-4 text-center text-[color:var(--home-ink)] text-[clamp(1.9rem,4.2vw,2.9rem)] md:mt-8"
+          className="home-display mt-2 text-center text-[color:var(--home-ink)] text-[clamp(1.7rem,3.2vw,2.35rem)] md:mt-4"
         >
           {t("title")}
         </motion.h2>
 
-        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {main.map((program, i) => {
             const Icon = MAIN_ICONS[i % MAIN_ICONS.length];
             const featured = Boolean(program.featured);
@@ -77,8 +77,8 @@ export default function ProgramsShowcase() {
                 transition={{ duration: 0.75, delay: 0.15 + i * 0.1, ease: EASE_LUXURY }}
                 className={
                   featured
-                    ? "home-card-dark group flex flex-col rounded-xl border-2 border-[color:var(--home-brass)] bg-home-ink p-7 pt-9 text-center shadow-[0_20px_50px_rgba(66,39,120,0.3)]"
-                    : "home-card group flex flex-col p-7 text-center"
+                    ? "home-card-dark group flex flex-col rounded-xl border-2 border-[color:var(--home-brass)] bg-home-ink p-6 pt-8 text-center shadow-[0_20px_50px_rgba(66,39,120,0.3)]"
+                    : "home-card group flex flex-col p-6 text-center"
                 }
               >
                 {featured && (
@@ -96,7 +96,7 @@ export default function ProgramsShowcase() {
                 </span>
 
                 <h3
-                  className={`home-display mt-6 text-[1.22rem] ${
+                  className={`home-display mt-5 text-[1.18rem] ${
                     featured ? "text-white" : "text-[color:var(--home-ink)]"
                   }`}
                 >
@@ -104,7 +104,7 @@ export default function ProgramsShowcase() {
                 </h3>
 
                 <p
-                  className={`mt-4 flex-1 text-[13.5px] leading-[1.7] ${
+                  className={`mt-3.5 flex-1 text-[14px] leading-[1.7] ${
                     featured ? "text-white/68" : "text-[color:var(--home-ink)]/62"
                   }`}
                 >
@@ -113,7 +113,7 @@ export default function ProgramsShowcase() {
 
                 <Link
                   href={href}
-                  className={`mt-6 inline-flex items-center justify-center gap-2 text-[13px] font-semibold transition-colors ${
+                  className={`mt-6 inline-flex items-center justify-center gap-2 text-[13.5px] font-bold transition-colors ${
                     featured
                       ? "text-brass-soft hover:text-white"
                       : "text-brass hover:text-[color:var(--home-ink)]"
@@ -145,17 +145,17 @@ export default function ProgramsShowcase() {
                   <Icon className="h-[22px] w-[22px]" />
                 </span>
 
-                <h3 className="home-display mt-4 text-[1.02rem] text-[color:var(--home-ink)]">
+                <h3 className="home-display mt-4 text-[1.08rem] text-[color:var(--home-ink)]">
                   {program.title}
                 </h3>
 
-                <p className="mt-3 flex-1 text-[12.5px] leading-[1.65] text-[color:var(--home-ink)]/60">
+                <p className="mt-3 flex-1 text-[13.5px] leading-[1.65] text-[color:var(--home-ink)]/62">
                   {program.desc}
                 </p>
 
                 <Link
                   href={href}
-                  className="mt-5 inline-flex items-center justify-center gap-2 text-[12.5px] font-semibold text-brass transition-colors hover:text-[color:var(--home-ink)]"
+                  className="mt-5 inline-flex items-center justify-center gap-2 text-[13px] font-bold text-brass transition-colors hover:text-[color:var(--home-ink)]"
                 >
                   {t("more")}
                   <Arrow className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />

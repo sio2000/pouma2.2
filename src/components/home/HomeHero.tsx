@@ -49,7 +49,7 @@ export default function HomeHero() {
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-10">
-        <div className="lg:max-w-[54%] lg:py-24 xl:py-28">
+        <div className="lg:max-w-[54%] lg:py-14 xl:py-16">
           <div className="[&>div]:justify-start [&>div]:mb-7">
             <HeroWorkshopButton />
           </div>
@@ -58,19 +58,19 @@ export default function HomeHero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: EASE_LUXURY }}
-            className="text-brass-soft text-[11px] font-medium uppercase tracking-[0.22em] sm:text-xs"
+            className="text-brass-soft text-[11.5px] font-semibold uppercase tracking-[0.2em] sm:text-[12px]"
           >
             {t("eyebrow")}
           </motion.p>
 
-          <div className="mt-7 space-y-1">
+          <div className="mt-5 space-y-1">
             {[t("line1"), t("line2"), t("line3")].map((line, i) => (
               <div key={line} className="overflow-hidden pb-1">
                 <motion.h1
                   initial={{ y: "108%" }}
                   animate={{ y: 0 }}
                   transition={{ duration: 1, delay: 0.1 + i * 0.1, ease: EASE_LUXURY }}
-                  className="home-display text-white text-[clamp(2.1rem,4.6vw,3.6rem)]"
+                  className="home-display text-white text-[clamp(1.95rem,3.9vw,3.05rem)]"
                 >
                   {line}
                 </motion.h1>
@@ -82,7 +82,7 @@ export default function HomeHero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.45, ease: EASE_LUXURY }}
-            className="mt-7 max-w-xl text-[15px] leading-[1.85] text-white/62 md:text-base"
+            className="mt-6 max-w-xl text-[15px] leading-[1.8] text-white/70 md:text-[15.5px]"
           >
             {t("lead")}
           </motion.p>
@@ -91,11 +91,11 @@ export default function HomeHero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.58, ease: EASE_LUXURY }}
-            className="mt-10"
+            className="mt-8"
           >
             <Link
               href={`/${locale}/contact`}
-              className="group inline-flex items-center gap-3 rounded-md bg-gradient-to-b from-[color:var(--home-brass-soft)] to-[color:var(--home-brass)] px-8 py-4 text-[15px] font-semibold text-[color:var(--home-ink-deep)] shadow-[0_12px_32px_rgba(198,161,91,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(198,161,91,0.4)]"
+              className="btn-brass group px-8 py-[0.95rem] text-[15px]"
             >
               {t("cta")}
               <svg
@@ -118,14 +118,14 @@ export default function HomeHero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.72, ease: EASE_LUXURY }}
-            className="mt-12 flex flex-wrap items-center gap-x-9 gap-y-4 border-t border-white/10 pt-7"
+            className="mt-9 flex flex-wrap items-center gap-x-9 gap-y-4 border-t border-white/12 pt-6"
           >
             {badges.map((badge, i) => {
               const Icon = BADGE_ICONS[i % BADGE_ICONS.length];
               return (
                 <li key={badge} className="flex items-center gap-2.5">
                   <Icon className="text-brass-soft h-[19px] w-[19px] shrink-0" />
-                  <span className="text-[12.5px] text-white/72">{badge}</span>
+                  <span className="text-[13.5px] text-white/75">{badge}</span>
                 </li>
               );
             })}

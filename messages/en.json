@@ -586,29 +586,33 @@
         {
           "text": "You want to grow professionally, but communication is holding you back.",
           "image": "/affects/affect-career.jpg",
-          "alt": "Professional at a window overlooking the city"
+          "alt": "A woman at a large window, turned towards the city",
+          "position": "58% 42%"
         },
         {
           "text": "You understand everything, but the moment you have to speak you freeze or hesitate.",
           "image": "/affects/affect-growth.jpg",
-          "alt": "A plant growing through cracked ground"
+          "alt": "A plant growing through cracked ground",
+          "position": "50% 50%"
         },
         {
           "text": "You have ideas to present, meetings to join and audiences to speak to.",
           "image": "/affects/affect-speak.jpg",
-          "alt": "Vintage microphone"
+          "alt": "Vintage microphone",
+          "position": "50% 50%"
         },
         {
           "text": "You are looking for a practical method that gets you speaking and leads to results.",
           "image": "/affects/affect-method.jpg",
-          "alt": "Brass compass"
+          "alt": "Brass compass",
+          "position": "50% 50%"
         }
       ]
     },
     "programs": {
       "title": "Our programmes",
       "more": "Learn more",
-      "badge": "Certification pending",
+      "badge": "Certification in progress",
       "main": [
         {
           "title": "Grammar & Speaking Foundations",

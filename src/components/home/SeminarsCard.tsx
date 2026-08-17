@@ -75,13 +75,13 @@ export default function SeminarsCard({ delay = 0 }: { delay?: number }) {
         <BroadcastIcon className="h-[23px] w-[23px]" />
       </span>
 
-      <h3 className="home-display mt-4 text-[1.15rem] text-white">{t("title")}</h3>
+      <h3 className="home-display mt-4 text-[1.2rem] text-white">{t("title")}</h3>
 
-      <p className="mt-3 flex-1 text-[12.5px] leading-[1.65] text-white/68">{t("desc")}</p>
+      <p className="mt-3 flex-1 text-[13.5px] leading-[1.65] text-white/75">{t("desc")}</p>
 
       <Link
         href={href}
-        className="text-brass-soft mt-5 inline-flex items-center justify-center gap-2 text-[12.5px] font-semibold transition-colors hover:text-white"
+        className="text-brass-soft mt-5 inline-flex items-center justify-center gap-2 text-[13px] font-bold transition-colors hover:text-white"
       >
         {t("cta")}
         <svg
