@@ -57,13 +57,13 @@ export default function FirstStepSection() {
   };
 
   return (
-    <section id="first-step" className="relative overflow-hidden bg-home-ink px-5 py-14 sm:px-6 md:py-18">
+    <section id="first-step" className="relative overflow-hidden bg-home-ink py-14 md:py-18">
       {/* The puma watching from the corner, barely there. */}
       <div className="pointer-events-none absolute -bottom-10 left-0 w-[26rem] opacity-[0.07] lg:w-[34rem]" aria-hidden>
         <PumaSilhouette gradientId="first-step-puma" />
       </div>
 
-      <div ref={ref} className="relative mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+      <div ref={ref} className="home-container relative grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
           <motion.h2
             initial={{ opacity: 0, y: 22 }}
@@ -80,7 +80,7 @@ export default function FirstStepSection() {
             initial={{ opacity: 0, y: 18 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.15, ease: EASE_LUXURY }}
-            className="mt-5 max-w-md text-[15px] leading-[1.8] text-white/70"
+            className="mt-5 max-w-lg text-[16.5px] leading-[1.8] text-white/78"
           >
             {t("lead")}
           </motion.p>
@@ -95,14 +95,14 @@ export default function FirstStepSection() {
               <MailIcon className="text-brass-soft h-[18px] w-[18px] shrink-0" />
               <a
                 href={`mailto:${email}`}
-                className="text-[13.5px] text-white/80 transition-colors hover:text-white"
+                className="text-[15px] text-white/85 transition-colors hover:text-white"
               >
                 {email}
               </a>
             </li>
             <li className="flex items-center gap-3">
               <PinIcon className="text-brass-soft h-[18px] w-[18px] shrink-0" />
-              <span className="text-[13.5px] text-white/80">{t("location")}</span>
+              <span className="text-[15px] text-white/85">{t("location")}</span>
             </li>
           </motion.ul>
 
@@ -175,12 +175,12 @@ export default function FirstStepSection() {
               <button
                 type="submit"
                 disabled={loading}
-                className="btn-brass w-full px-8 py-[0.95rem] text-[15px]"
+                className="btn-brass w-full px-8 py-[1.05rem] text-[16px]"
               >
                 {loading ? "…" : t("submit")}
               </button>
 
-              <p className="pt-1 text-center text-[12.5px] text-white/55">{t("note")}</p>
+              <p className="pt-1 text-center text-[13.5px] text-white/60">{t("note")}</p>
             </form>
           )}
         </motion.div>

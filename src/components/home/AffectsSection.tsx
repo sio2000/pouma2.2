@@ -27,8 +27,8 @@ export default function AffectsSection() {
   const items = t.raw("items") as Affect[];
 
   return (
-    <section className="relative overflow-hidden bg-home-paper px-5 py-12 sm:px-6 md:py-16">
-      <div ref={ref} className="mx-auto max-w-6xl">
+    <section className="relative overflow-hidden bg-home-paper py-12 md:py-16">
+      <div ref={ref} className="home-container">
         <motion.h2
           initial={{ opacity: 0, y: 22 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -78,7 +78,7 @@ export default function AffectsSection() {
                   <div className="absolute inset-0 bg-[color:var(--home-brass)]/18 mix-blend-multiply" aria-hidden />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#241733] via-[#241733]/55 to-transparent" aria-hidden />
 
-                  <p className="absolute inset-x-0 bottom-0 p-5 text-[14px] leading-[1.6] text-white/95">
+                  <p className="absolute inset-x-0 bottom-0 p-5 text-[15px] leading-[1.6] text-white/95">
                     {item.text}
                   </p>
                 </div>

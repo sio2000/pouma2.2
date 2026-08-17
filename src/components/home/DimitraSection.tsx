@@ -73,7 +73,7 @@ export default function DimitraSection() {
             initial={{ opacity: 0, y: 18 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.15, ease: EASE_LUXURY }}
-            className="mt-6 max-w-2xl text-[15px] leading-[1.85] text-[color:var(--home-ink)]/68"
+            className="mt-6 max-w-2xl text-[16.5px] leading-[1.8] text-[color:var(--home-ink)]/72"
           >
             {t("p1")}
           </motion.p>
@@ -82,7 +82,7 @@ export default function DimitraSection() {
             initial={{ opacity: 0, y: 18 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.26, ease: EASE_LUXURY }}
-            className="mt-4 max-w-2xl text-[15px] leading-[1.85] text-[color:var(--home-ink)]/68"
+            className="mt-4 max-w-2xl text-[16.5px] leading-[1.8] text-[color:var(--home-ink)]/72"
           >
             {t("p2")}
           </motion.p>
@@ -98,7 +98,7 @@ export default function DimitraSection() {
               return (
                 <li key={fact} className="flex items-start gap-3">
                   <Icon className="mt-0.5 h-[19px] w-[19px] shrink-0 text-brass" />
-                  <span className="text-[13px] leading-[1.5] text-[color:var(--home-ink)]/72">
+                  <span className="text-[14px] leading-[1.5] text-[color:var(--home-ink)]/75">
                     {fact}
                   </span>
                 </li>
@@ -113,7 +113,7 @@ export default function DimitraSection() {
           >
             <Link
               href={`/${locale}/about`}
-              className="group mt-8 inline-flex items-center gap-2 text-[13.5px] font-bold text-brass transition-colors hover:text-[color:var(--home-ink)]"
+              className="group mt-8 inline-flex items-center gap-2 text-[14.5px] font-bold text-brass transition-colors hover:text-[color:var(--home-ink)]"
             >
               {tHero("aboutMore")}
               <svg

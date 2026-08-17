@@ -53,8 +53,8 @@ export default function ProgramsShowcase() {
   const href = `/${locale}/programs`;
 
   return (
-    <section className="relative overflow-hidden bg-home-paper px-5 pb-16 pt-6 sm:px-6 md:pt-10">
-      <div ref={ref} className="mx-auto max-w-6xl">
+    <section className="relative overflow-hidden bg-home-paper pb-16 pt-6 md:pt-10">
+      <div ref={ref} className="home-container">
         <motion.h2
           initial={{ opacity: 0, y: 22 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -82,7 +82,7 @@ export default function ProgramsShowcase() {
                 }
               >
                 {featured && (
-                  <span className="text-brass-soft absolute right-4 top-4 rounded-sm border border-[color:var(--home-brass)]/60 px-2.5 py-1 text-[9.5px] font-semibold uppercase tracking-[0.14em]">
+                  <span className="text-brass-soft absolute right-4 top-4 rounded-sm border border-[color:var(--home-brass)]/60 px-2.5 py-1 text-[10.5px] font-bold uppercase tracking-[0.12em]">
                     {t("badge")}
                   </span>
                 )}
@@ -96,7 +96,7 @@ export default function ProgramsShowcase() {
                 </span>
 
                 <h3
-                  className={`home-display mt-5 text-[1.18rem] ${
+                  className={`home-display mt-5 text-[1.22rem] ${
                     featured ? "text-white" : "text-[color:var(--home-ink)]"
                   }`}
                 >
@@ -104,7 +104,7 @@ export default function ProgramsShowcase() {
                 </h3>
 
                 <p
-                  className={`mt-3.5 flex-1 text-[14px] leading-[1.7] ${
+                  className={`mt-3.5 flex-1 text-[15px] leading-[1.7] ${
                     featured ? "text-white/68" : "text-[color:var(--home-ink)]/62"
                   }`}
                 >
@@ -113,7 +113,7 @@ export default function ProgramsShowcase() {
 
                 <Link
                   href={href}
-                  className={`mt-6 inline-flex items-center justify-center gap-2 text-[13.5px] font-bold transition-colors ${
+                  className={`mt-6 inline-flex items-center justify-center gap-2 text-[14.5px] font-bold transition-colors ${
                     featured
                       ? "text-brass-soft hover:text-white"
                       : "text-brass hover:text-[color:var(--home-ink)]"
@@ -145,17 +145,17 @@ export default function ProgramsShowcase() {
                   <Icon className="h-[22px] w-[22px]" />
                 </span>
 
-                <h3 className="home-display mt-4 text-[1.08rem] text-[color:var(--home-ink)]">
+                <h3 className="home-display mt-4 text-[1.14rem] text-[color:var(--home-ink)]">
                   {program.title}
                 </h3>
 
-                <p className="mt-3 flex-1 text-[13.5px] leading-[1.65] text-[color:var(--home-ink)]/62">
+                <p className="mt-3 flex-1 text-[14.5px] leading-[1.65] text-[color:var(--home-ink)]/68">
                   {program.desc}
                 </p>
 
                 <Link
                   href={href}
-                  className="mt-5 inline-flex items-center justify-center gap-2 text-[13px] font-bold text-brass transition-colors hover:text-[color:var(--home-ink)]"
+                  className="mt-5 inline-flex items-center justify-center gap-2 text-[14px] font-bold text-brass transition-colors hover:text-[color:var(--home-ink)]"
                 >
                   {t("more")}
                   <Arrow className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />

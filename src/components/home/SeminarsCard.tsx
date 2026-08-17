@@ -66,7 +66,7 @@ export default function SeminarsCard({ delay = 0 }: { delay?: number }) {
           animate={{ opacity: [0.35, 1, 0.35], scale: [1, 1.25, 1] }}
           transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
         />
-        <span className="text-brass-soft text-[9.5px] font-semibold uppercase tracking-[0.16em]">
+        <span className="text-brass-soft text-[10.5px] font-bold uppercase tracking-[0.14em]">
           {t("label")}
         </span>
       </span>
@@ -75,13 +75,13 @@ export default function SeminarsCard({ delay = 0 }: { delay?: number }) {
         <BroadcastIcon className="h-[23px] w-[23px]" />
       </span>
 
-      <h3 className="home-display mt-4 text-[1.2rem] text-white">{t("title")}</h3>
+      <h3 className="home-display mt-4 text-[1.26rem] text-white">{t("title")}</h3>
 
-      <p className="mt-3 flex-1 text-[13.5px] leading-[1.65] text-white/75">{t("desc")}</p>
+      <p className="mt-3 flex-1 text-[14.5px] leading-[1.65] text-white/80">{t("desc")}</p>
 
       <Link
         href={href}
-        className="text-brass-soft mt-5 inline-flex items-center justify-center gap-2 text-[13px] font-bold transition-colors hover:text-white"
+        className="text-brass-soft mt-5 inline-flex items-center justify-center gap-2 text-[14px] font-bold transition-colors hover:text-white"
       >
         {t("cta")}
         <svg

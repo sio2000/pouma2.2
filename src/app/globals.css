@@ -25,7 +25,7 @@
   --color-kroke-300:    #FFD978;
   --color-kroke-400:    #F5B335;
   --color-kroke-500:    #E89A18;
-  --font-display:       "Cormorant Garamond", Georgia, serif;
+  --font-display:       "EB Garamond", "Cormorant Garamond", Georgia, serif;
   --font-sans:          "Outfit", system-ui, sans-serif;
   --font-script:        "Great Vibes", "Segoe Script", cursive;
 }
@@ -449,6 +449,78 @@ body {
 /* Lighter brass, for small type sitting on the violet bands. */
 .text-brass-soft { color: var(--home-brass-soft); }
 .border-brass { border-color: var(--home-brass); }
+
+/* One container for every homepage band, so the left edge of the hero
+   headline, the first card below it and every heading further down all sit on
+   the same vertical line. */
+/* Matches the header's own container exactly, so the logo, the hero headline
+   and the left edge of every card below all sit on the same line. */
+.home-container {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 640px) { .home-container { padding-inline: 1.5rem; } }
+@media (min-width: 1024px) { .home-container { padding-inline: 2.5rem; } }
+
+/* Gold hover for the navigation, matching the cards: the wash, the hairline,
+   the glow, and the shine sweeping across. */
+.nav-gold {
+  position: absolute;
+  inset: 0;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-gold-400);
+  background: color-mix(in srgb, var(--color-gold-200) 45%, transparent);
+  box-shadow:
+    0 0 26px color-mix(in srgb, var(--color-gold-400) 38%, transparent),
+    0 4px 12px color-mix(in srgb, var(--color-gold-500) 20%, transparent);
+}
+
+.nav-gold::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--color-gold-300) 45%, transparent),
+    transparent
+  );
+  animation: nav-gold-sweep 0.7s ease-out;
+}
+
+@keyframes nav-gold-sweep {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+/* The same gold sweep on the brass buttons, so header, cards and buttons all
+   behave identically under the cursor. */
+.btn-brass { position: relative; isolation: isolate; overflow: hidden; }
+
+.btn-brass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.55),
+    transparent
+  );
+  transition: transform 0.7s ease-out;
+}
+
+.btn-brass:hover::after { transform: translateX(100%); }
 
 /* Serif display used by the homepage headings. */
 .home-display {

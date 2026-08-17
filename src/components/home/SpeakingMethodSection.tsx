@@ -27,8 +27,8 @@ export default function SpeakingMethodSection() {
   const steps = t.raw("steps") as Step[];
 
   return (
-    <section className="relative overflow-hidden bg-home-ink px-5 py-14 sm:px-6 md:py-18">
-      <div ref={ref} className="mx-auto max-w-6xl">
+    <section className="relative overflow-hidden bg-home-ink py-14 md:py-18">
+      <div ref={ref} className="home-container">
         <motion.h2
           initial={{ opacity: 0, y: 22 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -69,11 +69,11 @@ export default function SpeakingMethodSection() {
                     </span>
                   </span>
 
-                  <h3 className="home-display mt-6 text-[1.15rem] italic text-white">
+                  <h3 className="home-display mt-6 text-[1.24rem] italic text-white">
                     {step.title}
                   </h3>
 
-                  <p className="mt-3 text-[13px] leading-[1.7] text-white/68">{step.desc}</p>
+                  <p className="mt-3 text-[14.5px] leading-[1.7] text-white/75">{step.desc}</p>
                 </motion.li>
               );
             })}

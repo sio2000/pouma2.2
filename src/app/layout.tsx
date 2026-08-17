@@ -18,8 +18,14 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: preloaderInitScript }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* EB Garamond replaces Cormorant Garamond as the display serif: it is
+            the same Garamond revival, but Google only ships Cormorant with
+            latin and cyrillic, so every Greek heading was quietly falling back
+            to Georgia while the English ones kept the elegant serif. EB
+            Garamond carries greek and greek-ext, so both scripts now render in
+            the same typeface. */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Great+Vibes&family=Outfit:wght@300;400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
       </head>

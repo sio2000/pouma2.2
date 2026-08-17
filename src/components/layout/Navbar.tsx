@@ -93,7 +93,7 @@ export default function Navbar() {
         transition={{ duration: 0.9, ease: EASE_LUXURY }}
         className="fixed top-0 left-0 right-0 z-50 h-32"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-full flex items-center justify-between">
+        <div className="home-container h-full flex items-center justify-between">
           <Link href={lp("/")} onClick={handleLogoClick} className="flex items-center gap-2 sm:gap-3 group min-w-0 flex-1 sm:flex-initial sm:flex-shrink-0 max-w-[calc(100%-3.25rem)]">
             <motion.div
               whileHover={{ scale: 1.05, rotate: -2 }}
@@ -163,23 +163,25 @@ export default function Navbar() {
                 href={lp(link.href)}
                 onMouseEnter={() => setHovered(link.href)}
                 className={cn(
-                  "relative whitespace-nowrap px-2.5 xl:px-3.5 py-2.5 text-[12.5px] xl:text-[13.5px] font-medium tracking-wide rounded-xl transition-colors duration-300",
-                  isActive(link.href)
-                    ? onDark
-                      ? "text-white"
-                      : "text-lav-600"
-                    : onDark
-                      ? "text-white/75 hover:text-white"
-                      : "text-plum/45 hover:text-plum"
+                  "relative whitespace-nowrap px-2 xl:px-3.5 py-2.5 text-[12.5px] xl:text-[14px] font-semibold tracking-wide rounded-xl transition-colors duration-300",
+                  // On the gold wash the label has to go dark to stay legible,
+                  // whichever background the bar is sitting on.
+                  hovered === link.href
+                    ? "text-plum"
+                    : isActive(link.href)
+                      ? onDark
+                        ? "text-white"
+                        : "text-lav-600"
+                      : onDark
+                        ? "text-white/78"
+                        : "text-plum/55"
                 )}
               >
+                {/* The cursor lights the link in the same gold as the cards. */}
                 {hovered === link.href && (
                   <motion.span
                     layoutId="nav-hover-pill"
-                    className={cn(
-                      "absolute inset-0 rounded-xl border",
-                      onDark ? "bg-white/10 border-white/20" : "bg-lav-50/90 border-lav-100"
-                    )}
+                    className="nav-gold absolute inset-0"
                     transition={{ type: "spring", stiffness: 450, damping: 34 }}
                   />
                 )}
@@ -203,7 +205,7 @@ export default function Navbar() {
             {/* The brass booking button the reference header carries. */}
             <Link
               href={lp("/contact")}
-              className="btn-brass group px-5 py-2.5 text-[13px]"
+              className="btn-brass group whitespace-nowrap px-4 py-2.5 text-[13px] xl:px-5 xl:text-[13.5px]"
             >
               {tHome("cta")}
             </Link>
@@ -297,7 +299,7 @@ export default function Navbar() {
                 <Link
                   href={lp("/contact")}
                   onClick={() => setMenuOpen(false)}
-                  className="btn-brass px-6 py-4 text-[15px]"
+                  className="btn-brass px-6 py-4 text-[16px]"
                 >
                   {tHome("cta")}
                 </Link>

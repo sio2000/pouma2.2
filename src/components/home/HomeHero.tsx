@@ -48,7 +48,7 @@ export default function HomeHero() {
         <div className="absolute inset-y-0 left-0 w-px rounded-full bg-gradient-to-b from-transparent via-[color:var(--home-brass)]/50 to-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-10">
+      <div className="home-container relative z-10">
         <div className="lg:max-w-[54%] lg:py-14 xl:py-16">
           <div className="[&>div]:justify-start [&>div]:mb-7">
             <HeroWorkshopButton />
@@ -58,7 +58,7 @@ export default function HomeHero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: EASE_LUXURY }}
-            className="text-brass-soft text-[11.5px] font-semibold uppercase tracking-[0.2em] sm:text-[12px]"
+            className="text-brass-soft text-[12.5px] font-semibold uppercase tracking-[0.18em] sm:text-[13px]"
           >
             {t("eyebrow")}
           </motion.p>
@@ -82,7 +82,7 @@ export default function HomeHero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.45, ease: EASE_LUXURY }}
-            className="mt-6 max-w-xl text-[15px] leading-[1.8] text-white/70 md:text-[15.5px]"
+            className="mt-6 max-w-2xl text-[16.5px] leading-[1.8] text-white/78 md:text-[17px]"
           >
             {t("lead")}
           </motion.p>
@@ -95,7 +95,7 @@ export default function HomeHero() {
           >
             <Link
               href={`/${locale}/contact`}
-              className="btn-brass group px-8 py-[0.95rem] text-[15px]"
+              className="btn-brass group px-9 py-[1.05rem] text-[16px]"
             >
               {t("cta")}
               <svg
@@ -125,7 +125,7 @@ export default function HomeHero() {
               return (
                 <li key={badge} className="flex items-center gap-2.5">
                   <Icon className="text-brass-soft h-[19px] w-[19px] shrink-0" />
-                  <span className="text-[13.5px] text-white/75">{badge}</span>
+                  <span className="text-[14.5px] text-white/80">{badge}</span>
                 </li>
               );
             })}
@@ -133,7 +133,7 @@ export default function HomeHero() {
         </div>
 
         {/* Mobile: the same portrait, arched on its top edge, under the copy. */}
-        <div className="relative -mx-5 mt-12 h-[58vh] min-h-[360px] overflow-hidden rounded-t-[7rem] sm:-mx-6 lg:hidden">
+        <div className="relative -mx-5 mt-10 h-[58vh] min-h-[360px] overflow-hidden rounded-t-[7rem] sm:-mx-6 lg:hidden">
           <Image
             src="/newherosectionimage.png"
             alt={`${founderName} — ${tBrand("name")}`}
