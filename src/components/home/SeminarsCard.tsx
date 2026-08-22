@@ -47,7 +47,7 @@ export default function SeminarsCard({ delay = 0 }: { delay?: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "0px 0px -10% 0px" }}
       transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
-      className="home-card-dark group relative flex flex-col rounded-xl border border-[color:var(--home-brass)]/70 bg-home-ink p-6 text-center shadow-[0_18px_44px_rgba(66,39,120,0.3)]"
+      className="home-card-dark group relative flex flex-col rounded-xl border border-[color:var(--home-brass)]/70 bg-home-ink p-6 text-center shadow-[0_18px_44px_rgba(101,52,182,0.28)]"
     >
       {/* A brass thread along the top edge that keeps travelling — the card is
           an announcement, so it should look alive. */}

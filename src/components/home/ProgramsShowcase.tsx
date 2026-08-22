@@ -36,9 +36,10 @@ const Arrow = ({ className }: { className?: string }) => (
 );
 
 /**
- * "Τα προγράμματά μας" — four programmes across the top, the certification one
- * carried in violet so it reads as the flagship, then the shorter offers on a
- * second, quieter row. The seminars noticeboard sits inside that second row,
+ * "Τα προγράμματά μας" — the core programmes across the top, then the shorter
+ * offers on a second, quieter row. The `featured` branch below is kept because
+ * the certification card may come back once it is awarded; nothing sets the
+ * flag today. The seminars noticeboard sits inside that second row,
  * between the first and second card, and is the one violet plate among the
  * pale ones so it announces itself.
  */
@@ -64,7 +65,7 @@ export default function ProgramsShowcase() {
           {t("title")}
         </motion.h2>
 
-        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {main.map((program, i) => {
             const Icon = MAIN_ICONS[i % MAIN_ICONS.length];
             const featured = Boolean(program.featured);
@@ -77,7 +78,7 @@ export default function ProgramsShowcase() {
                 transition={{ duration: 0.75, delay: 0.15 + i * 0.1, ease: EASE_LUXURY }}
                 className={
                   featured
-                    ? "home-card-dark group flex flex-col rounded-xl border-2 border-[color:var(--home-brass)] bg-home-ink p-6 pt-8 text-center shadow-[0_20px_50px_rgba(66,39,120,0.3)]"
+                    ? "home-card-dark group flex flex-col rounded-xl border-2 border-[color:var(--home-brass)] bg-home-ink p-6 pt-8 text-center shadow-[0_20px_50px_rgba(101,52,182,0.28)]"
                     : "home-card group flex flex-col p-6 text-center"
                 }
               >

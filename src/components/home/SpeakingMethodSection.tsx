@@ -60,7 +60,11 @@ export default function SpeakingMethodSection() {
                   className="home-card-dark group flex flex-col items-center rounded-2xl border border-transparent px-4 pb-6 pt-2 text-center md:px-6"
                 >
                   <span className="relative">
-                    <span className="home-medallion h-[4.4rem] w-[4.4rem] bg-[color:var(--home-ink)]">
+                    <span
+                      className={`home-medallion h-[4.4rem] w-[4.4rem] bg-[color:var(--home-ink)] ${
+                        i === 0 ? "medallion-white" : ""
+                      }`}
+                    >
                       <Icon className="h-8 w-8" />
                     </span>
                     {/* The number, on the shoulder of the medallion. */}

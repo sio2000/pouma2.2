@@ -625,11 +625,6 @@
         {
           "title": "Speaking Practice",
           "desc": "Practice on real subjects, with focused feedback and strategic improvement."
-        },
-        {
-          "title": "Professional Soft Skills Certification",
-          "desc": "Top-level soft skills with an international mark. Communication with influence. Leadership with substance.",
-          "featured": true
         }
       ],
       "extra": [
@@ -721,6 +716,53 @@
       "note": "We will get in touch to arrange your appointment.",
       "success": "Thank you! We will get in touch within 24 hours.",
       "location": "Athens, Greece"
+    },
+    "whatChanges": {
+      "title": "What changes in practice when we work together",
+      "lead": "The progress shows in the way you speak, think and present yourself.",
+      "items": [
+        {
+          "title": "You speak without constantly translating in your head",
+          "desc": "The words come faster and more naturally."
+        },
+        {
+          "title": "You organise your thinking faster",
+          "desc": "You know what to say and how to say it."
+        },
+        {
+          "title": "You sound more natural and more professional",
+          "desc": "Your speech gains flow and presence."
+        },
+        {
+          "title": "You stop hiding in the moments that matter",
+          "desc": "You speak with more confidence in meetings, interviews and presentations."
+        }
+      ]
+    },
+    "whyAcademy": {
+      "title": "Why The Pouma Academy",
+      "lead": "Because here you do not simply learn English. You learn to express yourself.",
+      "items": [
+        {
+          "title": "Live online, with substance",
+          "desc": "Live lessons with guidance and immediate use in real situations."
+        },
+        {
+          "title": "Boutique groups",
+          "desc": "Small groups of up to 4 for personal attention and real progress."
+        },
+        {
+          "title": "A specialised approach",
+          "desc": "For professionals and executives who want communication and public speaking that works."
+        },
+        {
+          "title": "Communication with confidence",
+          "desc": "We build clarity, presence and the ability to influence in your own way."
+        }
+      ]
+    },
+    "voices": {
+      "title": "What the participants say"
     }
   }
 }

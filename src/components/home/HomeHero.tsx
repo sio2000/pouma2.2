@@ -28,16 +28,16 @@ export default function HomeHero() {
       {/* The portrait: right half on desktop, held inside a tall arch whose
           left edge is a single brass hairline. */}
       <div
-        className="pointer-events-none absolute bottom-0 right-0 top-24 hidden w-[41%] xl:w-[40%] lg:block"
+        className="pointer-events-none absolute bottom-0 right-0 top-32 hidden w-[35%] xl:w-[34%] lg:block"
         aria-hidden
       >
-        <div className="relative h-full w-full overflow-hidden rounded-bl-[13rem] rounded-tl-[13rem]">
+        <div className="relative h-full w-full overflow-hidden rounded-bl-[11rem] rounded-tl-[11rem]">
           <Image
             src="/newherosectionimage.png"
             alt={`${founderName} — ${tBrand("name")}`}
             fill
             priority
-            sizes="41vw"
+            sizes="35vw"
             className="object-cover object-[52%_16%]"
           />
           {/* Just enough to blend the left edge into the violet field — the
@@ -49,8 +49,8 @@ export default function HomeHero() {
       </div>
 
       <div className="home-container relative z-10">
-        <div className="lg:max-w-[54%] lg:py-14 xl:py-16">
-          <div className="[&>div]:justify-start [&>div]:mb-7">
+        <div className="lg:max-w-[58%] lg:pb-10 lg:pt-2 xl:pb-12">
+          <div className="[&>div]:justify-start [&>div]:mb-5">
             <HeroWorkshopButton />
           </div>
 
@@ -91,7 +91,7 @@ export default function HomeHero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.58, ease: EASE_LUXURY }}
-            className="mt-8"
+            className="mt-7"
           >
             <Link
               href={`/${locale}/contact`}
@@ -118,7 +118,7 @@ export default function HomeHero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.72, ease: EASE_LUXURY }}
-            className="mt-9 flex flex-wrap items-center gap-x-9 gap-y-4 border-t border-white/12 pt-6"
+            className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-white/12 pt-5"
           >
             {badges.map((badge, i) => {
               const Icon = BADGE_ICONS[i % BADGE_ICONS.length];

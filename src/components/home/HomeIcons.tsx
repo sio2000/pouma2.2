@@ -130,6 +130,26 @@ export const FlagIcon = make(
   </>,
 );
 
+/* ── What changes in practice ────────────────────── */
+export const MindIcon = make(
+  <>
+    <path d="M15.4 20v-2.3c0-.7.3-1.3.8-1.8A6.2 6.2 0 108.2 6.6a6.2 6.2 0 00-1.4 9.3c.5.5.8 1.1.8 1.8V20" />
+    <path d="M9.6 11.2a1.6 1.6 0 013.2 0 1.6 1.6 0 001.6 1.6" opacity="0.6" />
+  </>,
+);
+
+export const SpeakWavesIcon = make(
+  <>
+    <circle cx="9" cy="7.6" r="2.8" />
+    <path d="M3.8 18.6c0-2.9 2.3-4.6 5.2-4.6" />
+    <path d="M14.6 8.4a4.6 4.6 0 010 7.2M17.6 5.8a8.4 8.4 0 010 12.4" opacity="0.6" />
+  </>,
+);
+
+export const StarIcon = make(
+  <path d="M12 3.4l2.5 5.3 5.8.8-4.2 4.1 1 5.8-5.1-2.7-5.1 2.7 1-5.8-4.2-4.1 5.8-.8L12 3.4z" />,
+);
+
 /* ── Why Pouma traits ────────────────────────────── */
 export const LotusIcon = make(
   <>
